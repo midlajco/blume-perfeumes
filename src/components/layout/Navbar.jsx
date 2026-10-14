@@ -14,7 +14,7 @@ function Navbar() {
 
         {/* Navigation */}
         <div className="flex items-center gap-8">
-          <Link to="/">Shop</Link>
+          <Link to="/shop">Shop</Link>
           <Link to="/">Categories</Link>
           <Link to="/">About Us</Link>
         </div>

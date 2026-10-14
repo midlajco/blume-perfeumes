@@ -1,95 +1,456 @@
 {
-    "users":[],
-    "products":[
-        {
-      "id": "1",
-      "name": "Rose Éclat",
-      "image": "/images/rose-eclat.jpg",
-      "catagory": "Floral",
-      "description": "A graceful floral fragrance with delicate rose petals and an elegant, soft finish.",
-      "price": 2499,
-      "stock": 12
-    },
-    {
-      "id": "2",
-      "name": "Citrus Veil",
-      "image": "/images/citrus-veil.jpg",
-      "catagory": "Fresh",
-      "description": "A bright and refreshing blend of sparkling citrus with a clean, uplifting character.",
-      "price": 1899,
-      "stock": 15
-    },
-    {
-      "id": "3",
-      "name": "Amber Nocturne",
-      "image": "/images/amber-nocturne.jpg",
-      "catagory": "Amber",
-      "description": "A rich, warm fragrance with golden amber accords and a deep, sensual character.",
-      "price": 2999,
-      "stock": 8
-    },
-    {
-      "id": "4",
-      "name": "Velvet Musk",
-      "image": "/images/velvet-musk.jpg",
-      "catagory": "Musk",
-      "description": "A soft and intimate musk fragrance with a smooth, understated elegance.",
-      "price": 2199,
-      "stock": 10
-    },
-    {
-      "id": "5",
-      "name": "Midnight Oud",
-      "image": "/images/midnight-oud.jpg",
-      "catagory": "Woody",
-      "description": "A bold woody fragrance with smoky oud accords and a mysterious, luxurious finish.",
-      "price": 3499,
-      "stock": 6
-    },
-    {
-      "id": "6",
-      "name": "Vanilla Reverie",
-      "image": "/images/vanilla-reverie.jpg",
-      "catagory": "Woody",
-      "description": "A comforting gourmand fragrance with creamy vanilla and a warm, indulgent sweetness.",
-      "price": 2299,
-      "stock": 14
-    },
-    {
-      "id": "7",
-      "name": "Jasmine Solace",
-      "image": "/images/jasmine-solace.jpg",
-      "catagory": "Floral",
-      "description": "An expressive floral scent featuring luminous white blossoms and a graceful, airy finish.",
-      "price": 2599,
-      "stock": 9
-    },
-    {
-      "id": "8",
-      "name": "Ocean Drift",
-      "image": "/images/ocean-drift.jpg",
-      "catagory": "Fresh",
-      "description": "A crisp aquatic fragrance inspired by ocean breezes, cool air, and coastal mornings.",
-      "price": 1999,
-      "stock": 11
-    },
-    {
-      "id": "9",
-      "name": "Sandalwood Dusk",
-      "image": "/images/sandalwood-dusk.jpg",
-      "catagory": "Woody",
-      "description": "A refined woody scent with creamy sandalwood character and a calm, earthy warmth.",
-      "price": 2799,
-      "stock": 7
-    },
-    {
-      "id": "10",
-      "name": "Velvet Saffron",
-      "image": "/images/velvet-saffron.jpg",
-      "catagory": "Amber",
-      "description": "An opulent fragrance with aromatic saffron character and a warm, sophisticated depth.",
-      "price": 3199,
-      "stock": 5
-    }
-    ]
+  "users": [],
+  "products": [
+     {
+    "id": "1",
+    "name": "Fleur Blanche",
+    "image": "/images/productimage/fleur-blanche.jpg",
+    "catagory": "Floral",
+    "description": "A luminous bouquet of white petals with a soft, graceful finish.",
+    "price": 2499,
+    "stock": 14
+  },
+  {
+    "id": "2",
+    "name": "Rose Petal",
+    "image": "/images/productimage/rose-petal.jpg",
+    "catagory": "Floral",
+    "description": "Fresh rose petals blend with a delicate powdery note for a romantic scent.",
+    "price": 2299,
+    "stock": 18
+  },
+  {
+    "id": "3",
+    "name": "Vanilla Muse",
+    "image": "/images/productimage/vanilla-muse.jpg",
+    "catagory": "Amber",
+    "description": "Creamy vanilla and warm amber create a smooth, comforting fragrance.",
+    "price": 2399,
+    "stock": 11
+  },
+  {
+    "id": "4",
+    "name": "Citrus Blossom",
+    "image": "/images/productimage/citrus-blossom.jpg",
+    "catagory": "Fresh",
+    "description": "Bright citrus zest meets airy blossoms for a clean everyday fragrance.",
+    "price": 1899,
+    "stock": 22
+  },
+  {
+    "id": "5",
+    "name": "Ocean Mist",
+    "image": "/images/productimage/ocean-mist.jpg",
+    "catagory": "Fresh",
+    "description": "Cool marine notes and a breezy mineral accord evoke the sea air.",
+    "price": 1999,
+    "stock": 16
+  },
+  {
+    "id": "6",
+    "name": "Sandal Aura",
+    "image": "/images/productimage/sandal-aura.jpg",
+    "catagory": "Woody",
+    "description": "Creamy sandalwood and gentle spice settle into a calm, polished trail.",
+    "price": 2699,
+    "stock": 9
+  },
+  {
+    "id": "7",
+    "name": "Amber Noir",
+    "image": "/images/productimage/amber-noir.jpg",
+    "catagory": "Amber",
+    "description": "Rich amber, dark resins, and a touch of spice create a deep evening scent.",
+    "price": 2799,
+    "stock": 7
+  },
+  {
+    "id": "8",
+    "name": "White Musk",
+    "image": "/images/productimage/white-musk.jpg",
+    "catagory": "Musk",
+    "description": "Clean white musk wraps the skin in a soft, understated scent.",
+    "price": 2199,
+    "stock": 20
+  },
+  {
+    "id": "9",
+    "name": "Jasmine Silk",
+    "image": "/images/productimage/jasmine-silk.jpg",
+    "catagory": "Floral",
+    "description": "Velvety jasmine petals bring an elegant floral heart with a smooth finish.",
+    "price": 2399,
+    "stock": 13
+  },
+  {
+    "id": "10",
+    "name": "Velvet Rose",
+    "image": "/images/productimage/velvet-rose.jpg",
+    "catagory": "Floral",
+    "description": "Lush rose and subtle green notes give this fragrance a refined character.",
+    "price": 2499,
+    "stock": 10
+  },
+  {
+    "id": "11",
+    "name": "Lotus Dream",
+    "image": "/images/productimage/lotus-dream.jpg",
+    "catagory": "Floral",
+    "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+    "price": 1999,
+    "stock": 17
+  },
+  {
+    "id": "12",
+    "name": "Peony Blush",
+    "image": "/images/productimage/peony-blush.jpg",
+    "catagory": "Floral",
+    "description": "Fresh peony blooms and a hint of fruit make a soft, cheerful scent.",
+    "price": 2199,
+    "stock": 15
+  },
+  {
+    "id": "13",
+    "name": "Lavender Sky",
+    "image": "/images/productimage/lavender-sky.jpg",
+    "catagory": "Fresh",
+    "description": "Aromatic lavender and crisp herbal notes feel clean and calming.",
+    "price": 1899,
+    "stock": 21
+  },
+  {
+    "id": "14",
+    "name": "Sea Salt",
+    "image": "/images/productimage/sea-salt.jpg",
+    "catagory": "Fresh",
+    "description": "Salty air, mineral notes, and a hint of citrus create a breezy coastal scent.",
+    "price": 1999,
+    "stock": 19
+  },
+  {
+    "id": "15",
+    "name": "Fig & Cedar",
+    "image": "/images/productimage/fig-cedar.jpg",
+    "catagory": "Woody",
+    "description": "Green fig blends with dry cedarwood for a modern, balanced fragrance.",
+    "price": 2599,
+    "stock": 8
+  },
+  {
+    "id": "16",
+    "name": "Lemon Verbena",
+    "image": "/images/productimage/lemon-verbena.jpg",
+    "catagory": "Fresh",
+    "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
+    "price": 1799,
+    "stock": 25
+  },
+  {
+    "id": "17",
+    "name": "Santal Dusk",
+    "image": "/images/productimage/santal-dusk.jpg",
+    "catagory": "Woody",
+    "description": "Sandalwood, soft woods, and a warm skin-like base create a quiet signature.",
+    "price": 2699,
+    "stock": 12
+  },
+  {
+    "id": "18",
+    "name": "Neroli Sun",
+    "image": "/images/productimage/neroli-sun.jpg",
+    "catagory": "Fresh",
+    "description": "Bitter orange blossom and fresh neroli bring a sunny, sparkling feel.",
+    "price": 2199,
+    "stock": 16
+  },
+  {
+    "id": "19",
+    "name": "Almond Milk",
+    "image": "/images/productimage/almond-milk.jpg",
+    "catagory": "Musk",
+    "description": "Soft almond and creamy musk create a gentle, cozy fragrance.",
+    "price": 2099,
+    "stock": 14
+  },
+  {
+    "id": "20",
+    "name": "Black Orchid",
+    "image": "/images/productimage/black-orchid.jpg",
+    "catagory": "Amber",
+    "description": "Dark florals and warm resinous notes give this scent a bold, mysterious edge.",
+    "price": 2899,
+    "stock": 6
+  },
+  {
+    "id": "21",
+    "name": "Wild Berry",
+    "image": "/images/productimage/wild-berry.jpg",
+    "catagory": "Fresh",
+    "description": "Juicy berries and crisp green notes make a lively, fruit-fresh fragrance.",
+    "price": 1899,
+    "stock": 23
+  },
+  {
+    "id": "22",
+    "name": "Green Tea",
+    "image": "/images/productimage/green-tea.jpg",
+    "catagory": "Fresh",
+    "description": "Green tea leaves and citrus notes create a refreshing, airy scent.",
+    "price": 1799,
+    "stock": 24
+  },
+  {
+    "id": "23",
+    "name": "Ylang Noir",
+    "image": "/images/productimage/ylang-noir.jpg",
+    "catagory": "Floral",
+    "description": "Exotic ylang-ylang and creamy petals lend a rich, sun-warmed floral character.",
+    "price": 2499,
+    "stock": 9
+  },
+  {
+    "id": "24",
+    "name": "Coconut Breeze",
+    "image": "/images/productimage/coconut-breeze.jpg",
+    "catagory": "Fresh",
+    "description": "Fresh coconut water and light tropical notes feel relaxed and breezy.",
+    "price": 1999,
+    "stock": 18
+  },
+  {
+    "id": "25",
+    "name": "Spiced Oud",
+    "image": "/images/productimage/spiced-oud.jpg",
+    "catagory": "Woody",
+    "description": "Smoky oud and warming spices form a bold, long-lasting woody profile.",
+    "price": 2999,
+    "stock": 5
+  },
+  {
+    "id": "26",
+    "name": "Tuberose",
+    "image": "/images/productimage/tuberose.jpg",
+    "catagory": "Floral",
+    "description": "Creamy tuberose blooms with a lush white-floral heart.",
+    "price": 2599,
+    "stock": 8
+  },
+  {
+    "id": "27",
+    "name": "Mandarin Grove",
+    "image": "/images/productimage/mandarin-grove.jpg",
+    "catagory": "Fresh",
+    "description": "Juicy mandarin and leafy green notes create a sparkling citrus fragrance.",
+    "price": 1899,
+    "stock": 20
+  },
+  {
+    "id": "28",
+    "name": "Violet Haze",
+    "image": "/images/productimage/violet-haze.jpg",
+    "catagory": "Floral",
+    "description": "Powdery violet and soft petals create an elegant, airy floral veil.",
+    "price": 2299,
+    "stock": 12
+  },
+  {
+    "id": "29",
+    "name": "Patchouli",
+    "image": "/images/productimage/patchouli.jpg",
+    "catagory": "Woody",
+    "description": "Earthy patchouli and dry woods give this fragrance depth and character.",
+    "price": 2499,
+    "stock": 10
+  },
+  {
+    "id": "30",
+    "name": "Silver Rain",
+    "image": "/images/productimage/silver-rain.jpg",
+    "catagory": "Fresh",
+    "description": "Cool aquatic notes and clean musk evoke the freshness of rain.",
+    "price": 2099,
+    "stock": 17
+  },
+  {
+    "id": "31",
+    "name": "Midnight Bloom",
+    "image": "/images/productimage/midnight-bloom.jpg",
+    "catagory": "Amber",
+    "description": "Dark petals, warm amber, and subtle woods create an alluring evening scent.",
+    "price": 2799,
+    "stock": 7
+  },
+  {
+    "id": "32",
+    "name": "Vanilla Amber",
+    "image": "/images/productimage/vanilla-amber.jpg",
+    "catagory": "Amber",
+    "description": "Golden amber and smooth vanilla form a rich, sweet, enveloping fragrance.",
+    "price": 2599,
+    "stock": 13
+  },
+  {
+    "id": "33",
+    "name": "Cashmere Musk",
+    "image": "/images/productimage/cashmere-musk.jpg",
+    "catagory": "Musk",
+    "description": "A soft blend of musk and creamy woods feels warm and close to the skin.",
+    "price": 2399,
+    "stock": 15
+  },
+  {
+    "id": "34",
+    "name": "Freesia Wind",
+    "image": "/images/productimage/freesia-wind.jpg",
+    "catagory": "Floral",
+    "description": "Airy freesia and dewy green notes create a fresh, delicate floral scent.",
+    "price": 2199,
+    "stock": 18
+  },
+  {
+    "id": "35",
+    "name": "Desert Rose",
+    "image": "/images/productimage/desert-rose.jpg",
+    "catagory": "Amber",
+    "description": "Rose warmed by dry amber and spice creates a smooth, sunlit fragrance.",
+    "price": 2499,
+    "stock": 11
+  },
+  {
+    "id": "36",
+    "name": "Bergamot",
+    "image": "/images/productimage/bergamot.jpg",
+    "catagory": "Fresh",
+    "description": "Bergamot peel and crisp aromatic notes deliver a bright, versatile scent.",
+    "price": 1799,
+    "stock": 26
+  },
+  {
+    "id": "37",
+    "name": "Oud Reverie",
+    "image": "/images/productimage/oud-reverie.jpg",
+    "catagory": "Woody",
+    "description": "Polished oud, dry cedar, and gentle resin create a sophisticated woody trail.",
+    "price": 2999,
+    "stock": 6
+  },
+  {
+    "id": "38",
+    "name": "Pink Pepper",
+    "image": "/images/productimage/pink-pepper.jpg",
+    "catagory": "Fresh",
+    "description": "Sparkling pink pepper and bright citrus give this fragrance a lively lift.",
+    "price": 1999,
+    "stock": 19
+  },
+  {
+    "id": "39",
+    "name": "Tonka Bean",
+    "image": "/images/productimage/tonka-bean.jpg",
+    "catagory": "Amber",
+    "description": "Tonka bean, vanilla, and soft spice create a warm gourmand fragrance.",
+    "price": 2499,
+    "stock": 12
+  },
+  {
+    "id": "40",
+    "name": "Iris Shadow",
+    "image": "/images/productimage/iris-shadow.jpg",
+    "catagory": "Musk",
+    "description": "Elegant iris and clean musk create a smooth, powdery, understated scent.",
+    "price": 2399,
+    "stock": 10
+  },
+  {
+    "id": "41",
+    "name": "Amber Vanilla",
+    "image": "/images/productimage/amber-vanilla.jpg",
+    "catagory": "Amber",
+    "description": "Sweet vanilla and golden amber melt into a cozy, lasting base.",
+    "price": 2399,
+    "stock": 16
+  },
+  {
+    "id": "42",
+    "name": "Sage Wood",
+    "image": "/images/productimage/sage-wood.jpg",
+    "catagory": "Woody",
+    "description": "Herbal sage and pale woods create a crisp, grounded, modern fragrance.",
+    "price": 2299,
+    "stock": 14
+  },
+  {
+    "id": "43",
+    "name": "Cherry Blossom",
+    "image": "/images/productimage/cherry-blossom.jpg",
+    "catagory": "Floral",
+    "description": "Delicate cherry blossoms and fresh fruit notes create a light springtime scent.",
+    "price": 2199,
+    "stock": 17
+  },
+  {
+    "id": "44",
+    "name": "Blood Orange",
+    "image": "/images/productimage/blood-orange.jpg",
+    "catagory": "Fresh",
+    "description": "Juicy blood orange and bright citrus peel give this scent a vivid opening.",
+    "price": 1899,
+    "stock": 22
+  },
+  {
+    "id": "45",
+    "name": "Leather Mist",
+    "image": "/images/productimage/leather-mist.jpg",
+    "catagory": "Woody",
+    "description": "Soft leather notes and smoky woods create a smooth, confident fragrance.",
+    "price": 2799,
+    "stock": 8
+  },
+  {
+    "id": "46",
+    "name": "Cardamom Spice",
+    "image": "/images/productimage/cardamom-spice.jpg",
+    "catagory": "Amber",
+    "description": "Aromatic cardamom and warm amber create a spicy, inviting scent.",
+    "price": 2499,
+    "stock": 13
+  },
+  {
+    "id": "47",
+    "name": "Tea Rose",
+    "image": "/images/productimage/tea-rose.jpg",
+    "catagory": "Floral",
+    "description": "Classic rose meets gentle tea notes for a fresh, graceful floral fragrance.",
+    "price": 2299,
+    "stock": 15
+  },
+  {
+    "id": "48",
+    "name": "Blue Lotus",
+    "image": "/images/productimage/blue-lotus.jpg",
+    "catagory": "Fresh",
+    "description": "Watery lotus and cool aquatic notes create a clean, tranquil scent.",
+    "price": 2099,
+    "stock": 18
+  },
+  {
+    "id": "49",
+    "name": "White Oud",
+    "image": "/images/productimage/white-oud.jpg",
+    "catagory": "Woody",
+    "description": "Light woods and refined oud create a balanced, elegant woody fragrance.",
+    "price": 2899,
+    "stock": 7
+  },
+  {
+    "id": "50",
+    "name": "Citrus Embers",
+    "image": "/images/productimage/citrus-embers.jpg",
+    "catagory": "Amber",
+    "description": "Bright citrus settles into a warm amber base for a fresh-to-warm contrast.",
+    "price": 2299,
+    "stock": 12
+  }
+
+  ]
 }
