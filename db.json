@@ -1,1 +1,95 @@
-{}
+{
+    "users":[],
+    "products":[
+        {
+      "id": "1",
+      "name": "Rose Éclat",
+      "image": "/images/rose-eclat.jpg",
+      "catagory": "Floral",
+      "description": "A graceful floral fragrance with delicate rose petals and an elegant, soft finish.",
+      "price": 2499,
+      "stock": 12
+    },
+    {
+      "id": "2",
+      "name": "Citrus Veil",
+      "image": "/images/citrus-veil.jpg",
+      "catagory": "Fresh",
+      "description": "A bright and refreshing blend of sparkling citrus with a clean, uplifting character.",
+      "price": 1899,
+      "stock": 15
+    },
+    {
+      "id": "3",
+      "name": "Amber Nocturne",
+      "image": "/images/amber-nocturne.jpg",
+      "catagory": "Amber",
+      "description": "A rich, warm fragrance with golden amber accords and a deep, sensual character.",
+      "price": 2999,
+      "stock": 8
+    },
+    {
+      "id": "4",
+      "name": "Velvet Musk",
+      "image": "/images/velvet-musk.jpg",
+      "catagory": "Musk",
+      "description": "A soft and intimate musk fragrance with a smooth, understated elegance.",
+      "price": 2199,
+      "stock": 10
+    },
+    {
+      "id": "5",
+      "name": "Midnight Oud",
+      "image": "/images/midnight-oud.jpg",
+      "catagory": "Woody",
+      "description": "A bold woody fragrance with smoky oud accords and a mysterious, luxurious finish.",
+      "price": 3499,
+      "stock": 6
+    },
+    {
+      "id": "6",
+      "name": "Vanilla Reverie",
+      "image": "/images/vanilla-reverie.jpg",
+      "catagory": "Woody",
+      "description": "A comforting gourmand fragrance with creamy vanilla and a warm, indulgent sweetness.",
+      "price": 2299,
+      "stock": 14
+    },
+    {
+      "id": "7",
+      "name": "Jasmine Solace",
+      "image": "/images/jasmine-solace.jpg",
+      "catagory": "Floral",
+      "description": "An expressive floral scent featuring luminous white blossoms and a graceful, airy finish.",
+      "price": 2599,
+      "stock": 9
+    },
+    {
+      "id": "8",
+      "name": "Ocean Drift",
+      "image": "/images/ocean-drift.jpg",
+      "catagory": "Fresh",
+      "description": "A crisp aquatic fragrance inspired by ocean breezes, cool air, and coastal mornings.",
+      "price": 1999,
+      "stock": 11
+    },
+    {
+      "id": "9",
+      "name": "Sandalwood Dusk",
+      "image": "/images/sandalwood-dusk.jpg",
+      "catagory": "Woody",
+      "description": "A refined woody scent with creamy sandalwood character and a calm, earthy warmth.",
+      "price": 2799,
+      "stock": 7
+    },
+    {
+      "id": "10",
+      "name": "Velvet Saffron",
+      "image": "/images/velvet-saffron.jpg",
+      "catagory": "Amber",
+      "description": "An opulent fragrance with aromatic saffron character and a warm, sophisticated depth.",
+      "price": 3199,
+      "stock": 5
+    }
+    ]
+}
