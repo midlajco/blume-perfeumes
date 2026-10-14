@@ -24,6 +24,11 @@ function Shop() {
     const filteredProducts =
         products.filter((product) => product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
         .filter((product) => category === "All" || product.category === category)
+        .sort((a,b)=>{
+            if(sortBy === "Low")return a.price-b.price;
+            if(sortBy==="High")return b.price -a.price;
+            return 0;
+        })
     return (
         <div className='mt-10' >
             <h1>shop</h1>
@@ -43,12 +48,18 @@ function Shop() {
                     <option value="Musk">Musk</option>
                     <option value="Woody">Woody</option>
                 </select>
+                <select onChange={(e)=>(setSortBy(e.target.value))} >
+                    <option value="High">High to Low</option>
+                    <option value="Low">Low to High</option>
+                    
+                </select>
             </div>
             <div>
                 {
                     filteredProducts.map((product) => (
                         <div key={product.id} >
                             {product.name}
+                            {product.price}
                         </div>
                     ))
                 }
