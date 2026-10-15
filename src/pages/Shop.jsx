@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { getProducts } from '../services/ProductService'
 import { useQuery } from '@tanstack/react-query';
+import ProductCard from '../components/shop/ProductCard';
 
 function Shop() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -55,15 +56,12 @@ function Shop() {
                 </select>
             </div>
             
-            <div>
+            <div className ="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-7 lg:gap-y-10" >
                 { filteredProducts.length === 0 ?(
                     <p>No products mathc your search.</p>)
                     :(
                     filteredProducts.map((product) => (
-                        <div key={product.id} >
-                            {product.name}
-                            {product.price}
-                        </div>
+                        <ProductCard key={product.id}  product={product} />
                     ))
                ) }
 
