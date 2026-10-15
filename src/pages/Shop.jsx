@@ -55,18 +55,22 @@ function Shop() {
                 </select>
             </div>
             <div>
-                {
+                { filteredProducts.length === 0 ?(
+                    <p>No products mathc your search.</p>)
+                    :(
                     filteredProducts.map((product) => (
                         <div key={product.id} >
                             {product.name}
                             {product.price}
                         </div>
                     ))
-                }
+               ) }
+
+
             </div>
 
         </div>
     )
 }
 
-export default Shop
+export default Shop ;
