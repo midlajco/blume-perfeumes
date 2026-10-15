@@ -133,6 +133,7 @@ function Register() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPass, setConfirmPass] = useState('')
+  
   const [errors, setErrors] = useState({})
   const [apiError, setApiError] = useState('')
   const [success, setSuccess] = useState('')
