@@ -6,7 +6,7 @@ import ProductCard from '../components/shop/ProductCard';
 function Shop() {
     const [searchTerm, setSearchTerm] = useState("");
     const [category, setCategory] = useState("All");
-    const [sortBy, setSortBy] = useState("low");
+    const [sortBy, setSortBy] = useState("Low");
 
     const { data: products, isLoading, isError } = useQuery({
         queryKey: ["products"],
