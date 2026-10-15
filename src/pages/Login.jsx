@@ -3,11 +3,14 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { validateEmail } from "../utils/validation";
 import { getUserByEmail } from "../services/UserService";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/authSlice";
 
 
 
 function Login() {
     const navigate = useNavigate();
+    const dispatch =useDispatch();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -51,6 +54,13 @@ function Login() {
                 return;
             }
             localStorage.setItem("userId", String(user.id));
+
+            dispatch(login({
+                id:user.id,
+                name:user.name,
+                email:user.email
+            }))
+
             navigate("/")
         }
         catch (error) {

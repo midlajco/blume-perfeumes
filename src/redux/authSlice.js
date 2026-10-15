@@ -4,6 +4,7 @@ const authSlice =createSlice({
     name:"auth",
     initialState:{
         user:null,
+   
     },
     reducers:{
         login:(state,action)=>{
@@ -12,6 +13,7 @@ const authSlice =createSlice({
         logout:(state)=>{
             state.user =null;
         },
+      
     },
 })
 
