@@ -1,9 +1,12 @@
 
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
+  
   return (
     <article className="group">
+      <Link to={`/products/${product.id}`} >
       <div className="relative aspect-[4/5] overflow-hidden bg-[#efede7]">
         <img
           src={product.image}
@@ -37,6 +40,7 @@ function ProductCard({ product }) {
           ₹{Number(product.price).toLocaleString("en-IN")}
         </p>
       </div>
+      </Link>
     </article>
   );
 }

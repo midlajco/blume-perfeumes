@@ -1,7 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 import { getProductById } from "../services/ProductService"
+import { useParams } from "react-router-dom";
 
 function ProductDetails() {
+    const {id} = useParams()
+    console.log(id)
     const { data: product, isLoading, isError } = useQuery({
         queryKey: ["product", id],
         queryFn: () => getProductById(id)
