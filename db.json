@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "midlaj",
+      "email": "midlaj@gmail.com",
+      "password": "12312378",
+      "id": "7O1xvfMJtow"
+    }
+  ],
   "products": [
     {
       "id": "1",
@@ -451,7 +458,6 @@
       "price": 2299,
       "stock": 12
     }
-  ]
-
-
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

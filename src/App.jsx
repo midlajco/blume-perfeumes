@@ -5,6 +5,8 @@ import Navbar from './components/layout/Navbar'
 import { Routes,Route } from 'react-router-dom'
 import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
+import Register from './pages/Register'
+
 
 function App() {
   
@@ -15,6 +17,9 @@ function App() {
         <Route path="/"  element={<Home/>} />
         <Route path="/shop"  element={<Shop/>} />
         <Route path="/products/:id"  element={<ProductDetails/>} />
+        <Route path="/register"  element={<Register/>} />
+        <Route path="/login"  element={<login/>} />
+       
      </Routes>
       
     </div>
