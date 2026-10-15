@@ -54,6 +54,7 @@ function Shop() {
                     
                 </select>
             </div>
+            
             <div>
                 { filteredProducts.length === 0 ?(
                     <p>No products mathc your search.</p>)
