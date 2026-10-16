@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { createWishlist, getWishList, updateWishlist } from "../services/WishlistService";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { getCart } from "../services/CartService";
+import { createCart, getCart } from "../services/CartService";
 
 function ProductDetails() {
 
@@ -36,7 +36,7 @@ function ProductDetails() {
             });
             return;
         }
-       
+
 
         const wishlist = await getWishList(user.id)
         if (!wishlist) {
@@ -48,7 +48,7 @@ function ProductDetails() {
             alert("already added");
             return
         }
-         const newItem = {
+        const newItem = {
             productId: product.id,
             name: product.name,
             image: product.image,
@@ -69,56 +69,64 @@ function ProductDetails() {
                 state: { from: { pathname: `/products/${product.id}` } },
             });
             return;
-           
+
         }
-         const cart = await getCart(user.id);
-         if(!cart){
-            
-         }
-
-
-        return (
-
-            <div className="grid gap-6 p-6 md:grid-cols-2">
-
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full rounded"
-                />
-
-                <div>
-                    <p>{product.catagory}</p>
-                    <h1 className="my-2 text-3xl font-bold">
-                        {product.name}
-                    </h1>
-
-                    <p className="my-4 text-xl">
-                        ₹{product.price}
-                    </p>
-
-                    <p className="mb-6">{product.description}</p>
-
-                    <button className="mb-3 w-full bg-black p-3 text-white">
-                        Buy Now
-                    </button>
-
-                    <button
-                        onClick={handleAddToCart}
-                        className="mb-3 w-full border p-3">
-                        Add to Cart
-                    </button>
-
-                    <button
-                        onClick={handleAddToWishlist}
-                        className="w-full border p-3">
-                        ♡ Add to Wishlist
-                    </button>
-                </div>
-
-            </div>
-        );
-
+        const newItem =         {
+                productId: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1
+            }
+        const cart = await getCart(user.id);
+        if (!cart) {
+            await createCart(user.id,newItem)
+                
+        }
     }
 
-    export default ProductDetails
+    return (
+
+        <div className="grid gap-6 p-6 md:grid-cols-2">
+
+            <img
+                src={product.image}
+                alt={product.name}
+                className="w-full rounded"
+            />
+
+            <div>
+                <p>{product.catagory}</p>
+                <h1 className="my-2 text-3xl font-bold">
+                    {product.name}
+                </h1>
+
+                <p className="my-4 text-xl">
+                    ₹{product.price}
+                </p>
+
+                <p className="mb-6">{product.description}</p>
+
+                <button className="mb-3 w-full bg-black p-3 text-white">
+                    Buy Now
+                </button>
+
+                <button
+                    onClick={handleAddtoCart}
+                    className="mb-3 w-full border p-3">
+                    Add to Cart
+                </button>
+
+                <button
+                    onClick={handleAddToWishlist}
+                    className="w-full border p-3">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+
+        </div>
+    );
+
+}
+
+export default ProductDetails

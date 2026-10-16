@@ -512,5 +512,20 @@
       "id": "djNakYOVVYI"
     }
   ],
+  "carts": [
+    {
+      "userId": "xUjYuH8GJU0",
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.jpg",
+          "quantity": 1
+        }
+      ],
+      "id": "pOmDu_rtktQ"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

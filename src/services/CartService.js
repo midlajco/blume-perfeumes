@@ -1,4 +1,4 @@
-import axios from axios
+import axios from "axios";
 
 
 const URL = "http://localhost:3000/carts";
@@ -8,4 +8,9 @@ export const getCart =async (userId) =>{
     return response.data[0] || null
 }
 
-
+export async function createCart(userId, product) {
+    const response = await axios.post(URL, {
+        userId,
+        items: [product],
+    });
+}
