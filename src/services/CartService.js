@@ -14,8 +14,8 @@ export async function createCart(userId, product) {
         items: [product],
     });
 }
-export async function updateCart(id,product){
-    const response =await axios.patch(`${URL}/${id}`,{
+export async function updateCart(cartId,product){
+    const response =await axios.patch(`${URL}/${cartId}`,{
         items:product
     })
 }

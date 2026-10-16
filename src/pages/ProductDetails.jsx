@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { createWishlist, getWishList, updateWishlist } from "../services/WishlistService";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { createCart, getCart } from "../services/CartService";
+import { createCart, getCart, updateCart } from "../services/CartService";
 
 function ProductDetails() {
 
@@ -80,9 +80,16 @@ function ProductDetails() {
             }
         const cart = await getCart(user.id);
         if (!cart) {
-            await createCart(user.id,newItem)
+            await createCart(user.id,newItem);
+            return
                 
         }
+        const items=cart.items;
+
+        const updatedItems =[
+            ...items,newItem
+        ]
+        await updateCart(cart.id,updatedItems)
     }
 
     return (

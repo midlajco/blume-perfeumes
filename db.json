@@ -522,9 +522,43 @@
           "price": 1799,
           "image": "/images/productimage/lemon-verbena.jpg",
           "quantity": 1
+        },
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.jpg",
+          "quantity": 1
+        },
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.jpg",
+          "quantity": 1
+        },
+        {
+          "productId": "32",
+          "name": "Vanilla Amber",
+          "price": 2599,
+          "image": "/images/productimage/vanilla-amber.jpg",
+          "quantity": 1
         }
       ],
       "id": "pOmDu_rtktQ"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "items": [
+        {
+          "productId": "37",
+          "name": "Oud Reverie",
+          "price": 2999,
+          "image": "/images/productimage/oud-reverie.jpg",
+          "quantity": 1
+        }
+      ],
+      "id": "dyCe2migQsU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
