@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { validateEmail } from "../utils/validation";
 import { getUserByEmail } from "../services/UserService";
 import { useDispatch } from "react-redux";
@@ -11,6 +11,7 @@ import { login } from "../redux/authSlice";
 function Login() {
     const navigate = useNavigate();
     const dispatch =useDispatch();
+    const location =useLocation();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -61,7 +62,7 @@ function Login() {
                 email:user.email
             }))
 
-            navigate("/")
+            navigate(location.state?.from?.pathname || "/");
         }
         catch (error) {
             setApiError("Something went wrong")

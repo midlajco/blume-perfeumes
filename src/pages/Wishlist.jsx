@@ -1,8 +1,9 @@
 
 
 function Wishlist() {
+  
   return (
-    <div className="mt-50">Wishlist</div>
+    <div className="mt-50w">Wishlist</div>
   )
 }
 

@@ -459,5 +459,8 @@
       "stock": 12
     }
   ],
+  "wishlist":[
+
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
