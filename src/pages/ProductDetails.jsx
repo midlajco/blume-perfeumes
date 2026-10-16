@@ -34,7 +34,15 @@ function ProductDetails() {
     state: { from: { pathname:`/products/${product.id}` }},
   });
   return;
-}
+}        
+       const newItem ={
+         productId: product.id,
+            name: product.name,
+            image: product.image,
+            category: product.category,
+            
+       } 
+        
         const wishlist = await getWishList(user.id)
         if (!wishlist) {
             await createWishlist(user.id, product.id);
@@ -47,7 +55,7 @@ function ProductDetails() {
         }
         const updatedItems = [
             ...wishlist.items,
-            { productId: product.id }
+           newItem
         ];
         await updateWishlist(wishlist.id, updatedItems)
 
