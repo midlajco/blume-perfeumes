@@ -25,11 +25,11 @@ function Navbar() {
             <UserRound size={24} />
           </Link>
 
-          <Link to="/" aria-label="Wishlist">
+          <Link to="/wishlist" aria-label="Wishlist">
             <Heart size={24} />
           </Link>
 
-          <Link to="/" aria-label="Cart">
+          <Link to="/cart" aria-label="Cart">
             <ShoppingBag size={24} />
           </Link>
         </div>

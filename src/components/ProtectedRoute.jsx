@@ -1,21 +1,23 @@
 import { useSelector } from "react-redux"
-import { useLocation ,Navigate} from "react-router-dom"
+import { useLocation, Navigate, Outlet } from "react-router-dom"
 
 
 
-function ProtectedRoute() {
-    const location =useLocation();
-    const user =useSelector((state)=>state.auth.user)
+function ProtectedRoute({ isLoading }) {
+    const location = useLocation();
+    const user = useSelector((state) => state.auth.user)
 
-    if (!user){
-        return  <Navigate   to="login"
-        replace
-        state={{from:location}}/>
+    if (isLoading) {
+        return <p>Loading your account...</p>;
     }
-  return (
-    <div>
-    </div>
-  )
+    if (!user) {
+        return <Navigate to="/login"
+            replace
+            state={{ from: location }} />
+    }
+    return (
+        <Outlet/>
+    )
 }
 
 export default ProtectedRoute
