@@ -71,25 +71,35 @@ function ProductDetails() {
             return;
 
         }
-        const newItem =         {
-                productId: product.id,
-                name: product.name,
-                price: product.price,
-                image: product.image,
-                quantity: 1
-            }
+        const newItem = {
+            productId: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 1
+        }
         const cart = await getCart(user.id);
         if (!cart) {
-            await createCart(user.id,newItem);
+            await createCart(user.id, newItem);
             return
-                
-        }
-        const items=cart.items;
 
-        const updatedItems =[
-            ...items,newItem
-        ]
-        await updateCart(cart.id,updatedItems)
+        }
+        const items = cart.items;
+        let updatedItems;
+        const existingItem = cart.items.some((item) => (item.productId) === product.id);
+        if (existingItem) {
+            updatedItems = cart.items.map((item) =>
+                item.productId === product.id
+                    ? { ...item, quantity: item.quantity + 1 }
+                    : item
+            )
+        } else {
+            updatedItems = [
+                ...items,
+                newItem
+            ];
+        }
+        await updateCart(cart.id, updatedItems)
     }
 
     return (
