@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 import { getProductById } from "../services/ProductService"
-import { useParams } from "react-router-dom";
+import { useParams, } from "react-router-dom";
+import { getWishList } from "../services/WishlistService";
 
 function ProductDetails() {
+    const user = useSelector((state) => state.auth.user);
     const {id} = useParams()
     console.log(id)
     const { data: product, isLoading, isError } = useQuery({
@@ -16,6 +18,17 @@ function ProductDetails() {
     if (isError) return <p>Failed to load product.</p>;
 
     if (!product) return <p>Product not found.</p>;
+
+    const handleAddToWishlist  =async()=>{
+        if(!user){
+            alert("please login")
+
+        }
+        const wishlist =await getWishList(user.id)
+        if(!wishlist){
+
+        }
+    }
     return (
 
         <div className="grid gap-6 p-6 md:grid-cols-2">
@@ -46,7 +59,9 @@ function ProductDetails() {
                     Add to Cart
                 </button>
 
-                <button className="w-full border p-3">
+                <button 
+                onClick={handleAddToWishlist}
+                  className="w-full border p-3">
                     ♡ Add to Wishlist
                 </button>
             </div>
