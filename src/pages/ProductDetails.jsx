@@ -1,12 +1,21 @@
 import { useQuery } from "@tanstack/react-query"
 import { getProductById } from "../services/ProductService"
-import { useParams, } from "react-router-dom";
-import { getWishList } from "../services/WishlistService";
+import { useParams, useNavigate} from "react-router-dom";
+import { createWishlist, getWishList, updateWishlist } from "../services/WishlistService";
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 function ProductDetails() {
+    
+    const navigate =useNavigate();
+    const location = useLocation();
+    const from =location.state?.from || "/";
+
     const user = useSelector((state) => state.auth.user);
-    const {id} = useParams()
-    console.log(id)
+    const { id } = useParams()
+
+
+
     const { data: product, isLoading, isError } = useQuery({
         queryKey: ["product", id],
         queryFn: () => getProductById(id)
@@ -19,15 +28,29 @@ function ProductDetails() {
 
     if (!product) return <p>Product not found.</p>;
 
-    const handleAddToWishlist  =async()=>{
-        if(!user){
-            alert("please login")
-
+    const handleAddToWishlist = async () => {
+       if (!user) {
+  navigate("/login", {
+    state: { from: { pathname:`/products/${product.id}` }},
+  });
+  return;
+}
+        const wishlist = await getWishList(user.id)
+        if (!wishlist) {
+            await createWishlist(user.id, product.id);
+            return
         }
-        const wishlist =await getWishList(user.id)
-        if(!wishlist){
-
+        const existing = wishlist.items.some((item) => (item.productId) === product.id);
+        if (existing) {
+            alert("already added");
+            return
         }
+        const updatedItems = [
+            ...wishlist.items,
+            { productId: product.id }
+        ];
+        await updateWishlist(wishlist.id, updatedItems)
+
     }
     return (
 
@@ -59,9 +82,9 @@ function ProductDetails() {
                     Add to Cart
                 </button>
 
-                <button 
-                onClick={handleAddToWishlist}
-                  className="w-full border p-3">
+                <button
+                    onClick={handleAddToWishlist}
+                    className="w-full border p-3">
                     ♡ Add to Wishlist
                 </button>
             </div>

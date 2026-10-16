@@ -62,7 +62,7 @@ function Login() {
                 email:user.email
             }))
 
-            navigate(location.state?.from?.pathname || "/");
+            navigate(location.state?.from?.pathname || "/",{replace:true});
         }
         catch (error) {
             setApiError("Something went wrong")

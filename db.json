@@ -5,6 +5,12 @@
       "email": "midlaj@gmail.com",
       "password": "12312378",
       "id": "7O1xvfMJtow"
+    },
+    {
+      "name": "mijo",
+      "email": "mijo@gmail.com",
+      "password": "mijomijo",
+      "id": "xUjYuH8GJU0"
     }
   ],
   "products": [
@@ -459,8 +465,34 @@
       "stock": 12
     }
   ],
-  "wishlist":[
-
+  "wishlists": [
+    {
+      "userId": "7O1xvfMJtow",
+      "items": [
+        {
+          "productId": "16"
+        },
+        {
+          "productId": "41"
+        },
+        {
+          "productId": "36"
+        },
+        {
+          "productId": "21"
+        }
+      ],
+      "id": "ZnNrCE4bBik"
+    },
+    {
+      "userId": "xUjYuH8GJU0",
+      "items": [
+        {
+          "productId": "16"
+        }
+      ],
+      "id": "djNakYOVVYI"
+    }
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
