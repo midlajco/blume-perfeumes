@@ -10,8 +10,8 @@ import { login } from "../redux/authSlice";
 
 function Login() {
     const navigate = useNavigate();
-    const dispatch =useDispatch();
-    const location =useLocation();
+    const dispatch = useDispatch();
+    const location = useLocation();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -57,12 +57,12 @@ function Login() {
             localStorage.setItem("userId", String(user.id));
 
             dispatch(login({
-                id:user.id,
-                name:user.name,
-                email:user.email
+                id: user.id,
+                name: user.name,
+                email: user.email
             }))
 
-            navigate(location.state?.from?.pathname || "/",{replace:true});
+            navigate(location.state?.from?.pathname || "/", { replace: true });
         }
         catch (error) {
             setApiError("Something went wrong")
@@ -102,11 +102,12 @@ function Login() {
                         type="password"
                         placeholder="Password"
                         value={password}
-                        onChange={(e) => {setPassword(e.target.value);
-                            setErrors((prev) => ({...prev, password: "" }));
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                            setErrors((prev) => ({ ...prev, password: "" }));
                         }}
-                    className="w-full border border-gray-300 bg-transparent px-4 py-3"
-                    required
+                        className="w-full border border-gray-300 bg-transparent px-4 py-3"
+                        required
                     />
                     {errors.password && <p>{errors.password}</p>
 
