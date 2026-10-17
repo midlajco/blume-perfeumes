@@ -561,5 +561,55 @@
       "id": "dyCe2migQsU"
     }
   ],
+  "orders": [
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "address": "",
+        "city": "",
+        "pincode": ""
+      },
+      "items": [
+        {
+          "productId": "37",
+          "name": "Oud Reverie",
+          "price": 2999,
+          "image": "/images/productimage/oud-reverie.jpg",
+          "quantity": 13
+        }
+      ],
+      "total": 38987,
+      "status": "Pending",
+      "createdAt": "2026-10-17T08:09:27.217Z",
+      "id": "mgDXeu7jxWE"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "da",
+        "email": "",
+        "phone": "as",
+        "address": "a",
+        "city": "a",
+        "pincode": "as"
+      },
+      "items": [
+        {
+          "productId": "37",
+          "name": "Oud Reverie",
+          "price": 2999,
+          "image": "/images/productimage/oud-reverie.jpg",
+          "quantity": 13
+        }
+      ],
+      "total": 38987,
+      "status": "Pending",
+      "createdAt": "2026-10-17T08:10:31.376Z",
+      "id": "w4aIPibULX4"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

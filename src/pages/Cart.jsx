@@ -40,8 +40,17 @@ function Cart() {
       items: updatedItems,
     });
   };
+  const handleRemove =(id)=>{
+
+    cartMutation.mutate({
+      id:cart.id,
+      items:items.filter((item)=>item.productId !== id),
+    })
+    
+  }
 
   if (items.length === 0) {
+    <Link to="/shop" > Shop More</Link>
     return <p className="mt-50 text-center">Your Cart is empty.</p>;
   }
   <Link to="/shop" > Shop More</Link>
@@ -55,6 +64,7 @@ function Cart() {
             <div>{item.quantity}</div>
             <button onClick={() => handleQ(item.productId, 1)} >+</button>
             <button onClick={() => handleQ(item.productId, -1)} >-</button>
+            <button onClick={()=>handleRemove(item.productId)} >Remove Item</button>
           </div>
         ))
       }
