@@ -26,7 +26,7 @@ export async function addProductToCart(userId, product) {
   const newItem = {
     productId: product.productId ?? product.id,
     name: product.name,
-    description:product.description,
+    descriptiongit:product.description,
     price: product.price,
     image: product.image,
     category:product.category,
