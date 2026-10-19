@@ -486,27 +486,36 @@
       "userId": "7O1xvfMJtow",
       "items": [
         {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "quantity": 2
+        },
+        {
           "productId": "19",
           "name": "Almond Milk",
           "price": 2099,
-          "image": "/images/productimage/almond-milk.jpg",
+          "image": "/images/productimage/almond-milk.png",
           "category": "Musk",
           "quantity": 1
         },
         {
-          "productId": "14",
-          "name": "Sea Salt",
+          "productId": "38",
+          "name": "Pink Pepper",
           "price": 1999,
-          "image": "/images/productimage/sea-salt.jpg",
+          "image": "/images/productimage/pink-pepper.png",
+          "category": "Fresh",
           "quantity": 1
         },
         {
-          "productId": "22",
-          "name": "Green Tea",
-          "price": 1799,
-          "image": "/images/productimage/green-tea.jpg",
+          "productId": "24",
+          "name": "Coconut Breeze",
+          "price": 1999,
+          "image": "/images/productimage/coconut-breeze.png",
           "category": "Fresh",
-          "quantity": 2
+          "quantity": 1
         }
       ],
       "id": "2u72CkM5IPM"
