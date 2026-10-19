@@ -3,28 +3,35 @@ import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
-  
   return (
     <article className="group">
-      <Link to={`/products/${product.id}`} >
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#efede7]">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#f5f2ec]">
+        <Link to={`/products/${product.id}`} className="block h-full w-full">
+          <div className="flex h-full w-full items-center justify-center p-5">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        </Link>
 
         <button
           type="button"
           aria-label={`Add ${product.name} to wishlist`}
-          className="absolute right-3 top-3 rounded-full bg-white/90 p-2 text-stone-800 hover:bg-white"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Add wishlist functionality here
+          }}
+          className="absolute right-3 top-3 z-10 rounded-full p-2 text-stone-800 transition hover:scale-110"
         >
-          <Heart size={18} strokeWidth={1.5} />
+          <Heart size={22} strokeWidth={1.5} />
         </button>
       </div>
 
       <div className="space-y-1 pt-3">
-        <h2 className="text-sm font-medium text-stone-800">
+        <h2 className="text-sm font-medium text-stone-900">
           {product.name}
         </h2>
 
@@ -40,7 +47,6 @@ function ProductCard({ product }) {
           ₹{Number(product.price).toLocaleString("en-IN")}
         </p>
       </div>
-      </Link>
     </article>
   );
 }

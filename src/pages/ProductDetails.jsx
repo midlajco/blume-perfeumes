@@ -106,47 +106,87 @@ function ProductDetails() {
         await updateCart(cart.id, updatedItems)
     }
 
-    return (
+    
+return (
+    <main className="min-h-screen bg-[#f7f5f1] px-5 pb-16 pt-28 text-[#171614] sm:px-8 md:px-[5.2%] md:pt-32">
 
-        <div className="grid gap-6 p-6 md:grid-cols-2">
+        {/* Breadcrumb */}
+        <nav className="mb-8 flex items-center gap-3 text-xs text-[#746d65]">
+            <button onClick={() => navigate("/")}>Home</button>
+            <span>/</span>
+            <button onClick={() => navigate("/shop")}>Fragrances</button>
+            <span>/</span>
+            <span className="text-[#171614]">{product.name}</span>
+        </nav>
 
-            <img
-                src={product.image}
-                alt={product.name}
-                className="w-full rounded"
-            />
+        {/* Product layout */}
+       
+{/* Filter toolbar */}
+<section className="border-y border-[#d8d2ca] bg-[#f7f5f1] px-5 sm:px-8 md:px-[4.5%]">
+    <div className="flex min-h-[68px] flex-wrap items-center justify-between gap-4 py-3 lg:flex-nowrap">
 
-            <div>
-                <p>{product.category}</p>
-                <h1 className="my-2 text-3xl font-bold">
-                    {product.name}
-                </h1>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <span className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#625b53]">
+    Filter by
+</span>
 
-                <p className="my-4 text-xl">
-                    ₹{product.price}
-                </p>
+            <div className="flex items-center gap-3 border-l border-[#ddd6ce] pl-5">
+                <label htmlFor="category-filter" className="whitespace-nowrap font-serif text-base">
+    Fragrance Family
+</label>
 
-                <p className="mb-6">{product.description}</p>
-
-                <button className="mb-3 w-full bg-black p-3 text-white">
-                    Buy Now
-                </button>
-
-                <button
-                    onClick={handleAddtoCart}
-                    className="mb-3 w-full border p-3">
-                    Add to Cart
-                </button>
-
-                <button
-                    onClick={handleAddToWishlist}
-                    className="w-full border p-3">
-                    ♡ Add to Wishlist
-                </button>
+                <select
+                    id="category-filter"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                    className="max-w-36 cursor-pointer bg-transparent text-sm outline-none"
+                >
+                    <option value="All">All Categories</option>
+                    <option value="Fresh">Fresh</option>
+                    <option value="Floral">Floral</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Musk">Musk</option>
+                    <option value="Woody">Woody</option>
+                </select>
             </div>
 
+            <div className="flex items-center gap-3 border-l border-[#ddd6ce] pl-5">
+                <label htmlFor="search-fragrances" className="text-sm">
+                    Search
+                </label>
+
+                <input
+                    id="search-fragrances"
+                    type="text"
+                    placeholder="Find a scent"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-28 bg-transparent text-sm outline-none placeholder:text-[#928a81] focus:placeholder:text-[#b7afa6] sm:w-32"
+                />
+            </div>
         </div>
-    );
+
+        <div className="flex items-center gap-4 border-l border-[#ddd6ce] pl-5">
+            <span className="whitespace-nowrap text-[9px] uppercase tracking-[0.2em]">
+                Sort by
+            </span>
+
+            <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="max-w-40 cursor-pointer bg-transparent text-sm outline-none"
+            >
+                <option value="Low">Price: Low to High</option>
+                <option value="High">Price: High to Low</option>
+            </select>
+        </div>
+
+    </div>
+</section>
+
+    </main>
+);
+
 
 }
 

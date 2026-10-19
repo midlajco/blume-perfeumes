@@ -1,30 +1,29 @@
 
-import React from "react";
 import { Link } from "react-router-dom";
 
 function Herobanner() {
   return (
-    <section className="relative isolate min-h-[720px] h-screen w-full overflow-hidden bg-[#e9dfd1] text-stone-900">
+    <section className="relative isolate min-h-[680px] h-screen max-h-[1000px] w-full overflow-hidden bg-[#e9dfd1] text-[#201c18]">
 
       {/* Background image */}
       <img
         src="/images/home/hero.png"
-        alt="Blume luxury fragrance collection"
+        alt="BLUME luxury fragrance collection"
         className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
       />
 
-      {/* Soft overlay for readable text */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#f4ede3]/35 via-transparent to-transparent" />
+      {/* Overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#f4ede3]/60 via-[#f4ede3]/15 to-transparent" />
 
-      {/* Hero content */}
-      <div className="flex h-full items-center px-6 pb-10 pt-24 sm:px-10 md:px-[6%]">
-        <div className="max-w-[650px]">
+      {/* Main content */}
+      <div className="flex h-full min-h-[680px] items-center px-6 pb-12 pt-24 sm:px-10 md:px-[6%]">
+        <div className="max-w-[760px]">
 
-          <p className="mb-5 text-[10px] uppercase tracking-[0.42em] sm:text-xs">
+          <p className="mb-6 text-[10px] uppercase tracking-[0.42em] sm:text-xs">
             Scent, reimagined
           </p>
 
-          <h1 className="font-serif text-5xl leading-[0.98] tracking-[-0.045em] sm:text-6xl md:text-7xl lg:text-[88px]">
+          <h1 className="font-serif text-5xl leading-[1.02] tracking-[-0.045em] sm:text-6xl md:text-7xl lg:text-[88px]">
             The art of
             <br />
             quiet presence.
