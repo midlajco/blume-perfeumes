@@ -37,10 +37,19 @@ function ProductDetails() {
             return;
         }
 
+        const newItem = {
+            productId: product.id,
+            name: product.name,
+            description:product.description,
+            image: product.image,
+            category: product.category,
+            price:product.price
 
+        }
         const wishlist = await getWishList(user.id)
+
         if (!wishlist) {
-            await createWishlist(user.id, product.id);
+            await createWishlist(user.id,newItem)
             return
         }
         const existing = wishlist.items.some((item) => (item.productId) === product.id);
@@ -48,13 +57,7 @@ function ProductDetails() {
             alert("already added");
             return
         }
-        const newItem = {
-            productId: product.id,
-            name: product.name,
-            image: product.image,
-            category: product.category,
-
-        }
+        
         const updatedItems = [
             ...wishlist.items,
             newItem
@@ -76,6 +79,7 @@ function ProductDetails() {
             name: product.name,
             price: product.price,
             image: product.image,
+            category:product.category,
             quantity: 1
         }
         const cart = await getCart(user.id);
@@ -113,7 +117,7 @@ function ProductDetails() {
             />
 
             <div>
-                <p>{product.catagory}</p>
+                <p>{product.category}</p>
                 <h1 className="my-2 text-3xl font-bold">
                     {product.name}
                 </h1>

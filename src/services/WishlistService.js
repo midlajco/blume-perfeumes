@@ -6,17 +6,17 @@ export const getWishList = async (userId) => {
   const response = await axios.get(URL, { params: { userId } });
   return response.data[0] || null;
 };
-export async function createWishlist(userId, productId) {
+export async function createWishlist(userId, product) {
   const response = await axios.post(URL, {
     userId,
-    items: [{ productId }],
+    items: [product],
   });
 
   return response.data;
 }
 export async function updateWishlist(wishlistId, items) {
   const response = await axios.patch(`${URL}/${wishlistId}`, {
-    items,
+    items:items
   });
 
   return response.data;

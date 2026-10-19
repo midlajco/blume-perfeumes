@@ -50,10 +50,10 @@ function Cart() {
   }
 
   if (items.length === 0) {
-    <Link to="/shop" > Shop More</Link>
-    return <p className="mt-50 text-center">Your Cart is empty.</p>;
+   
+    return <p className="mt-50 text-center">Your Cart is empty,<Link to="/shop" > Shop More</Link></p>;
   }
-  <Link to="/shop" > Shop More</Link>
+  
 
   return (
     <div className="mt-50" >
@@ -62,6 +62,8 @@ function Cart() {
           <div key={item.id}>
             <div>{item.name}</div>
             <div>{item.quantity}</div>
+            <div>{item.category}</div>
+            <div>{item.price}</div>
             <button onClick={() => handleQ(item.productId, 1)} >+</button>
             <button onClick={() => handleQ(item.productId, -1)} >-</button>
             <button onClick={()=>handleRemove(item.productId)} >Remove Item</button>
