@@ -21,15 +21,14 @@ export async function updateCart(cartId, product) {
   return response.data;
 }
 
-
 export async function addProductToCart(userId, product) {
   const newItem = {
     productId: product.productId ?? product.id,
     name: product.name,
-    descriptiongit:product.description,
+    descriptiongit: product.description,
     price: product.price,
     image: product.image,
-    category:product.category,
+    category: product.category,
     quantity: 1,
   };
 
@@ -45,8 +44,7 @@ export async function addProductToCart(userId, product) {
 
   // Product already cart-il undo enn check cheyyuka
   const existingItem = items.find(
-    (cartItem) =>
-      String(cartItem.productId) === String(newItem.productId)
+    (cartItem) => String(cartItem.productId) === String(newItem.productId),
   );
 
   let updatedItems;
@@ -55,7 +53,7 @@ export async function addProductToCart(userId, product) {
     updatedItems = items.map((cartItem) =>
       String(cartItem.productId) === String(newItem.productId)
         ? { ...cartItem, quantity: cartItem.quantity + 1 }
-        : cartItem
+        : cartItem,
     );
   } else {
     updatedItems = [...items, newItem];
@@ -63,4 +61,3 @@ export async function addProductToCart(userId, product) {
 
   return await updateCart(cart.id, updatedItems);
 }
-

@@ -42,18 +42,18 @@ function Checkout() {
     mutationFn: placeOrder,
     onSuccess: async () => {
       alert("Order placed successfully!");
-      
-        await updateCart (cart.id,[])
-      
+
+      await updateCart(cart.id, [])
+
 
       queryClient.invalidateQueries({
         queryKey: ["cart", user.id],
       });
     },
     onError: (error) => {
-    console.error("Order failed:", error);
-    alert("Failed to place order.");
-  },
+      console.error("Order failed:", error);
+      alert("Failed to place order.");
+    },
   })
   function handlePlaceOrder(e) {
     e.preventDefault();
@@ -165,7 +165,7 @@ function Checkout() {
           ))
         }
         <p>total : {total}</p>
-        <button type='submit'  disabled={orderMutation.isPending} >place</button>
+        <button type='submit' disabled={orderMutation.isPending} >place</button>
 
       </form>
     </div>

@@ -40,16 +40,16 @@ function ProductDetails() {
         const newItem = {
             productId: product.id,
             name: product.name,
-            description:product.description,
+            description: product.description,
             image: product.image,
             category: product.category,
-            price:product.price
+            price: product.price
 
         }
         const wishlist = await getWishList(user.id)
 
         if (!wishlist) {
-            await createWishlist(user.id,newItem)
+            await createWishlist(user.id, newItem)
             return
         }
         const existing = wishlist.items.some((item) => (item.productId) === product.id);
@@ -57,7 +57,7 @@ function ProductDetails() {
             alert("already added");
             return
         }
-        
+
         const updatedItems = [
             ...wishlist.items,
             newItem
@@ -79,7 +79,7 @@ function ProductDetails() {
             name: product.name,
             price: product.price,
             image: product.image,
-            category:product.category,
+            category: product.category,
             quantity: 1
         }
         const cart = await getCart(user.id);

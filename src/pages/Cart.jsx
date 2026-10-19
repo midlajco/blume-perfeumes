@@ -1,10 +1,12 @@
 import { QueryClient, useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { useSelector } from "react-redux"
 import { getCart } from "../services/CartService"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { updateCart } from "../services/CartService"
 
 function Cart() {
+  const navigate = useNavigate()
+
   const user = useSelector((state) => state.auth.user);
   const queryClient = useQueryClient();
 
@@ -40,20 +42,20 @@ function Cart() {
       items: updatedItems,
     });
   };
-  const handleRemove =(id)=>{
+  const handleRemove = (id) => {
 
     cartMutation.mutate({
-      id:cart.id,
-      items:items.filter((item)=>item.productId !== id),
+      id: cart.id,
+      items: items.filter((item) => item.productId !== id),
     })
-    
+
   }
 
   if (items.length === 0) {
-   
+
     return <p className="mt-50 text-center">Your Cart is empty,<Link to="/shop" > Shop More</Link></p>;
   }
-  
+
 
   return (
     <div className="mt-50" >
@@ -66,10 +68,11 @@ function Cart() {
             <div>{item.price}</div>
             <button onClick={() => handleQ(item.productId, 1)} >+</button>
             <button onClick={() => handleQ(item.productId, -1)} >-</button>
-            <button onClick={()=>handleRemove(item.productId)} >Remove Item</button>
+            <button onClick={() => handleRemove(item.productId)} >Remove Item</button>
           </div>
         ))
       }
+      <button onClick={navigate("/checkout")} >Chekout</button>
     </div>
   )
 }

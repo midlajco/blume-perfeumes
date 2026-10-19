@@ -18,13 +18,13 @@ function Wishlist() {
 
   })
   const removeMutation = useMutation({
-  mutationFn: ({ wishlistId, items }) => updateWishlist(wishlistId, items),
-  onSuccess: () => {
-    queryClient.invalidateQueries({
-      queryKey: ['wishlist', user?.id],
-    });
-  },
-});
+    mutationFn: ({ wishlistId, items }) => updateWishlist(wishlistId, items),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['wishlist', user?.id],
+      });
+    },
+  });
   if (isLoading) return <p>Loading wishlist...</p>;
 
   if (isError) return <p>Failed to load wishlist.</p>;
@@ -37,7 +37,7 @@ function Wishlist() {
     return <p className="mt-50 text-center">Your wishlist is empty.</p>;
   }
   console.log(items)
-  
+
 
   const handleRemove = (productId) => {
     removeMutation.mutate({
@@ -47,24 +47,24 @@ function Wishlist() {
       ),
     });
   };
- const handleAddToCart =async(product)=>{
-  const newItem ={
-    id:product.productId,
-    name:product.name,
-    description:product.description,
-    category:product.category,
-    image:product.image,
-    price:product.price,
-    quantity:1
-  }
-    await addProductToCart(user.id,newItem)
+  const handleAddToCart = async (product) => {
+    const newItem = {
+      id: product.productId,
+      name: product.name,
+      description: product.description,
+      category: product.category,
+      image: product.image,
+      price: product.price,
+      quantity: 1
+    }
+    await addProductToCart(user.id, newItem)
     await queryClient.invalidateQueries({
-  queryKey: ["cart", user.id],
-});
+      queryKey: ["cart", user.id],
+    });
 
- } 
+  }
 
- 
+
 
   return (
     <div className='mt-50' >
@@ -72,8 +72,8 @@ function Wishlist() {
         items.map((item) => (
           <div key={item.productId}>
             <p>{item.productId}</p>
-            <button onClick={()=>handleAddToCart(item)} >addtocart</button>
-           
+            <button onClick={() => handleAddToCart(item)} >addtocart</button>
+
             <button onClick={() => {
               handleRemove(item.productId); console.log("ok");
             }} >remove</button>

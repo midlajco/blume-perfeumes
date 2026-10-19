@@ -16,7 +16,7 @@ export async function createWishlist(userId, product) {
 }
 export async function updateWishlist(wishlistId, items) {
   const response = await axios.patch(`${URL}/${wishlistId}`, {
-    items:items
+    items: items,
   });
 
   return response.data;
