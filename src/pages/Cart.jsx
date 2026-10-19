@@ -69,15 +69,15 @@ return (
       <div className="absolute inset-0 bg-[#e8d9c6]/20" />
     </div>
 
-    <div className="relative z-10 mx-auto max-w-[1600px] px-5 pb-10 pt-6 sm:px-8 md:px-[5.5%] md:pt-8">
+    <div className="relative z-10 mx-auto max-w-[1600px] px-5 pb-10 pt-6 sm:px-8 md:px-[5.5%] md:pt-8 mt-10">
 
       {/* Brand */}
-      <Link
+      {/* <Link
         to="/"
         className="inline-block font-serif text-3xl tracking-[0.02em] sm:text-4xl"
       >
         BLUME
-      </Link>
+      </Link> */}
 
       {/* Page heading */}
       <header className="mb-6 mt-8 sm:mb-7 sm:mt-9">
