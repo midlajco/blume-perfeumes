@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import Navbar from './components/layout/Navbar'
 import { useState } from 'react'
 
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route,useLocation } from 'react-router-dom'
 import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
 import Register from './pages/Register'
@@ -22,6 +22,12 @@ import Checkout from './pages/Checkout'
 
 function App() {
 
+  const location = useLocation();
+
+const hideNavbar =
+  location.pathname === "/login" ||
+  location.pathname === "/register";
+   
   const dispatch = useDispatch();
   const userId = localStorage.getItem("userId");
   const [authReady, setAuthReady] = useState(!userId);
@@ -53,7 +59,7 @@ useEffect(() => {
  
   return (
     <div>
-      <Navbar/>
+      {!hideNavbar && <Navbar />}
      <Routes>
 
         <Route path="/"  element={<Home/>} />

@@ -112,46 +112,116 @@ function ProductDetails() {
     }
 
     return (
+    <main className="min-h-screen bg-[#f7f5f0] text-[#171614]">
 
-        <div className="grid gap-6 p-6 md:grid-cols-2">
+        {/* Product details */}
+        <section className="mx-auto min-h-[calc(100vh-80px)] max-w-[1600px] px-5 pb-12 pt-24 sm:px-8 md:px-[4.5%] md:pt-28">
 
-            <img
-                src={product.image}
-                alt={product.name}
-                className="w-full rounded"
-            />
-
-            <div>
-                <p>{product.category}</p>
-                <h1 className="my-2 text-3xl font-bold">
-                    {product.name}
-                </h1>
-
-                <p className="my-4 text-xl">
-                    ₹{product.price}
-                </p>
-
-                <p className="mb-6">{product.description}</p>
-
-                <button className="mb-3 w-full bg-black p-3 text-white">
-                    Buy Now
-                </button>
-
+            {/* Breadcrumb */}
+            <nav className="mb-5 flex flex-wrap items-center gap-2 text-[10px] text-[#827c74] md:mb-8">
                 <button
-                    onClick={handleAddtoCart}
-                    className="mb-3 w-full border p-3">
-                    Add to Cart
+                    onClick={() => navigate("/")}
+                    className="transition-colors hover:text-black"
+                >
+                    Home
                 </button>
-
+                <span>/</span>
                 <button
-                    onClick={handleAddToWishlist}
-                    className="w-full border p-3">
-                    ♡ Add to Wishlist
+                    onClick={() => navigate("/shop")}
+                    className="transition-colors hover:text-black"
+                >
+                    Fragrances
                 </button>
+                <span>/</span>
+                <span className="text-[#514b44]">{product.name}</span>
+            </nav>
+
+            <div className="grid grid-cols-1 items-start gap-6 sm:gap-10 md:grid-cols-2 md:gap-12 lg:gap-20">
+
+                {/* Product image */}
+                <div className="flex h-[350px] items-center justify-center sm:h-[450px] md:sticky md:top-24 md:h-[540px]">
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                        className="h-full w-full object-contain"
+                    />
+                </div>
+
+                {/* Product information */}
+                <div className="flex w-full flex-col justify-center pt-2 sm:pt-5 md:pt-4 lg:pt-5">
+
+                    <span className="mb-5 w-fit bg-[#eee7dd] px-3 py-2 text-[9px] uppercase tracking-[0.16em] text-[#776b5d]">
+                        {product.category}
+                    </span>
+
+                    <h1 className="font-serif text-4xl leading-[1.12] tracking-[-0.045em] sm:text-5xl lg:text-[54px]">
+                        {product.name}
+                    </h1>
+
+                    <p className="mt-3 text-sm text-[#786f66]">
+                        Eau de Parfum
+                    </p>
+
+                    <p className="mt-6 font-serif text-3xl tracking-tight sm:text-4xl">
+                        ₹{Number(product.price).toLocaleString("en-IN")}
+                    </p>
+
+                    <p className="mt-5 max-w-xl text-sm leading-7 text-[#786f66]">
+                        {product.description}
+                    </p>
+
+                    {/* Add to cart */}
+                    <button
+                        onClick={handleAddtoCart}
+                        className="mt-7 flex min-h-[58px] w-full items-center justify-center bg-[#171614] px-6 py-4 text-sm text-white transition-colors duration-300 hover:bg-[#37332e]"
+                    >
+                        Add to Cart
+                    </button>
+
+                    {/* Add to wishlist */}
+                    <button
+                        onClick={handleAddToWishlist}
+                        className="mt-2 flex min-h-[58px] w-full items-center justify-center gap-2 border border-[#b8b2aa] bg-transparent px-6 py-4 text-sm transition-colors duration-300 hover:border-[#171614] hover:bg-[#eeeae4]"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                        </svg>
+                        Add to Wishlist
+                    </button>
+
+                    {/* Additional product information */}
+                    <div className="mt-8 border-t border-black/10 pt-5">
+                        <div className="flex items-center justify-between py-3">
+                            <span className="text-[10px] uppercase tracking-[0.15em] text-[#655e55]">
+                                Fragrance family
+                            </span>
+                            <span className="text-xs">{product.category}</span>
+                        </div>
+
+                        <div className="flex items-center justify-between border-t border-black/10 py-3">
+                            <span className="text-[10px] uppercase tracking-[0.15em] text-[#655e55]">
+                                Collection
+                            </span>
+                            <span className="text-xs">Fine Fragrances</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-        </div>
-    );
+    </main>
+);
 
 }
 
