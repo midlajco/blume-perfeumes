@@ -465,180 +465,40 @@
       "stock": 12
     }
   ],
-  "wishlists": [
-    {
-      "userId": "7O1xvfMJtow",
-      "items": [
-        {
-          "productId": "16",
-          "name": "Lemon Verbena",
-          "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
-          "image": "/images/productimage/lemon-verbena.png",
-          "category": "Fresh",
-          "price": 1799
-        },
-        {
-          "productId": "19",
-          "name": "Almond Milk",
-          "description": "Soft almond and creamy musk create a gentle, cozy fragrance.",
-          "image": "/images/productimage/almond-milk.png",
-          "category": "Musk",
-          "price": 2099
-        },
-        {
-          "productId": "4",
-          "name": "Citrus Blossom",
-          "description": "Bright citrus zest meets airy blossoms for a clean everyday fragrance.",
-          "image": "/images/productimage/citrus-blossom.png",
-          "category": "Fresh",
-          "price": 1899
-        }
-      ],
-      "id": "EDrCFoY7JrM"
-    }
-  ],
+  "wishlists": [],
   "carts": [
     {
       "userId": "7O1xvfMJtow",
       "items": [],
-      "id": "2u72CkM5IPM"
+      "id": "hTHv0MHcS44"
     }
   ],
   "orders": [
     {
       "userId": "7O1xvfMJtow",
       "customer": {
-        "name": "xsdasdasA",
-        "email": "g@gmail.com",
-        "phone": "DSDS",
-        "address": "dad",
-        "city": "adca",
-        "pincode": "dsa",
-        "paymentmethode": "COD"
-      },
-      "items": [
-        {
-          "productId": "37",
-          "name": "Oud Reverie",
-          "price": 2999,
-          "image": "/images/productimage/oud-reverie.jpg",
-          "quantity": 13
-        }
-      ],
-      "total": 38987,
-      "status": "Pending",
-      "createdAt": "2026-10-17T08:48:04.662Z",
-      "id": "pBwjBcQHIzY"
-    },
-    {
-      "userId": "7O1xvfMJtow",
-      "customer": {
-        "name": "ca",
-        "email": "ga@gmail.com",
-        "phone": "ca",
-        "address": "ca",
-        "city": "ac",
-        "pincode": "a",
-        "paymentMethod": "Card"
+        "name": "asmas",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "+919446480362",
+        "address": "casdca",
+        "city": "das",
+        "pincode": "77",
+        "paymentMethod": "COD"
       },
       "items": [
         {
           "productId": "22",
           "name": "Green Tea",
           "price": 1799,
-          "image": "/images/productimage/green-tea.jpg",
-          "quantity": 1
+          "image": "/images/productimage/green-tea.png",
+          "category": "Fresh",
+          "quantity": 13
         }
       ],
-      "total": 1799,
+      "total": 23387,
       "status": "Pending",
-      "createdAt": "2026-10-17T09:16:26.412Z",
-      "id": "c3W_UmTEFp4"
-    },
-    {
-      "userId": "7O1xvfMJtow",
-      "customer": {
-        "name": "midlaj",
-        "email": "midlajkalathil11@gmail.com",
-        "phone": "+919446480362",
-        "address": "asda",
-        "city": "saas",
-        "pincode": "dsa",
-        "paymentMethod": "Card"
-      },
-      "items": [
-        {
-          "productId": "16",
-          "name": "Lemon Verbena",
-          "price": 1799,
-          "image": "/images/productimage/lemon-verbena.png",
-          "category": "Fresh",
-          "quantity": 2
-        },
-        {
-          "productId": "19",
-          "name": "Almond Milk",
-          "price": 2099,
-          "image": "/images/productimage/almond-milk.png",
-          "category": "Musk",
-          "quantity": 2
-        },
-        {
-          "productId": "38",
-          "name": "Pink Pepper",
-          "price": 1999,
-          "image": "/images/productimage/pink-pepper.png",
-          "category": "Fresh",
-          "quantity": 1
-        },
-        {
-          "productId": "24",
-          "name": "Coconut Breeze",
-          "price": 1999,
-          "image": "/images/productimage/coconut-breeze.png",
-          "category": "Fresh",
-          "quantity": 1
-        },
-        {
-          "productId": "4",
-          "name": "Citrus Blossom",
-          "descriptiongit": "Bright citrus zest meets airy blossoms for a clean everyday fragrance.",
-          "price": 1899,
-          "image": "/images/productimage/citrus-blossom.png",
-          "category": "Fresh",
-          "quantity": 1
-        }
-      ],
-      "total": 13693,
-      "status": "Pending",
-      "createdAt": "2026-10-19T16:32:24.940Z",
-      "id": "yhVqTCS9ezA"
-    },
-    {
-      "userId": "7O1xvfMJtow",
-      "customer": {
-        "name": "asmas",
-        "email": "lapmidlaj@gmail.com",
-        "phone": "+919446480362",
-        "address": "elankur-manjeri",
-        "city": "das",
-        "pincode": "616423",
-        "paymentMethod": "COD"
-      },
-      "items": [
-        {
-          "productId": "27",
-          "name": "Mandarin Grove",
-          "price": 1899,
-          "image": "/images/productimage/mandarin-grove.png",
-          "category": "Fresh",
-          "quantity": 1
-        }
-      ],
-      "total": 1899,
-      "status": "Pending",
-      "createdAt": "2026-10-19T16:38:54.621Z",
-      "id": "i7QNTfGPvNQ"
+      "createdAt": "2026-10-20T04:08:57.189Z",
+      "id": "OJSYOsWgndo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
