@@ -468,7 +468,16 @@
   "wishlists": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [],
+      "items": [
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "description": "Bergamot peel and crisp aromatic notes deliver a bright, versatile scent.",
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "price": 1799
+        }
+      ],
       "id": "5zt4i2w79ps"
     },
     {
@@ -660,6 +669,32 @@
       "status": "Pending",
       "createdAt": "2026-10-20T07:15:13.684Z",
       "id": "wt7HBRHcExg"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "midlaj",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "saas",
+        "pincode": "321.35",
+        "paymentMethod": "UPI"
+      },
+      "items": [
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "quantity": 6
+        }
+      ],
+      "total": 10794,
+      "status": "Pending",
+      "createdAt": "2026-10-20T10:32:25.238Z",
+      "id": "1zInZ74gyss"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
