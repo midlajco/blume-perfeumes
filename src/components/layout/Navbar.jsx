@@ -1,9 +1,23 @@
 
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Search, ShoppingBag, Heart, UserRound } from "lucide-react";
-
+import ProfileSidebar from "../Profile";
 
 function Navbar() {
+  const navigate =useNavigate();
+  const [isProfileOpen,setIsProfileOpen]=useState(false)
+  const handleProfileClick =()=>{
+    if(!user){
+      navigate("/login")
+      return;
+    }
+    setIsProfileOpen(true)
+  }
+
+  const user = useSelector((state) => state.auth.user);
+
   return (
     <nav className="absolute inset-x-0 top-0 z-50 border-b border-black/15 text-stone-900">
       <div className="mx-auto flex h-20 items-center justify-between px-5 md:px-10 lg:px-[4.5%]">
@@ -44,13 +58,13 @@ function Navbar() {
 
           <span className="hidden h-7 w-px bg-black/20 sm:block" />
 
-          <Link
-            to="/"
-            aria-label="Wishlist"
+          <button
+            onClick={handleProfileClick}
+            aria-label="Open profile menu"
             className="hidden sm:block"
           >
-            < UserRound size={19} strokeWidth={1.3} />
-          </Link>
+            <UserRound size={19} strokeWidth={1.3} />
+          </button>
 
           <Link
             to="/wishlist"
@@ -59,7 +73,7 @@ function Navbar() {
           >
             <Heart size={19} strokeWidth={1.3} />
           </Link>
-          
+
 
           <Link
             to="/cart"
@@ -71,6 +85,14 @@ function Navbar() {
           </Link>
         </div>
       </div>
+      <ProfileSidebar
+        isOpen={isProfileOpen}
+        onClose={() => setIsProfileOpen(false)}
+        user={user}
+        onLogout={() => {
+          console.log("Logout will be connected next");
+        }}
+      />
     </nav>
   );
 }
