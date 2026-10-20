@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import Navbar from './components/layout/Navbar'
 import { useState } from 'react'
 
-import { Routes,Route,useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
 import Register from './pages/Register'
@@ -24,60 +24,71 @@ function App() {
 
   const location = useLocation();
 
-const hideNavbar =
-  location.pathname === "/login" ||
-  location.pathname === "/register";
-   
+  const hideNavbar =
+    location.pathname === "/login" ||
+    location.pathname === "/register";
+
   const dispatch = useDispatch();
   const userId = localStorage.getItem("userId");
   const [authReady, setAuthReady] = useState(!userId);
 
 
-  const {data:user,isLoading:isUserLoading} =useQuery({
-    queryKey:["currentuser",userId],
-    queryFn:()=>getUserById(userId),
-    enabled:!!userId,
+  const { data: user, isLoading: isUserLoading } = useQuery({
+    queryKey: ["currentuser", userId],
+    queryFn: () => getUserById(userId),
+    enabled: !!userId,
 
 
   })
 
 
-useEffect(() => {
-  if (isUserLoading) return;
+  useEffect(() => {
+    if (isUserLoading) return;
 
-  if (user) {
-    dispatch(login({
-      id: user.id,
-      name: user.name,
-      email: user.email,
-    }));
-  }
+    if (user) {
+      dispatch(login({
+        id: user.id,
+        name: user.name,
+        email: user.email,
+      }));
+    }
 
-  setAuthReady(true);
-}, [user, isUserLoading, dispatch]);
+    setAuthReady(true);
+  }, [user, isUserLoading, dispatch]);
 
- 
+
   return (
     <div>
       {!hideNavbar && <Navbar />}
-     <Routes>
+      <Routes>
 
-        <Route path="/"  element={<Home/>} />
-        <Route path="/shop"  element={<Shop/>} />
-        <Route path="/products/:id"  element={<ProductDetails/>} />
-        <Route path="/register"  element={<Register/>} />
-        <Route path="/login"  element={<Login/>} />
-       <Route element={<ProtectedRoute  isLoading={!authReady} />} >
-            <Route path="/cart" element={<Cart/>}  />
-            <Route path="/wishlist" element={<Wishlist/>}  />
-            <Route path="/orders" element={<Orders/>}  />
-            <Route path="/checkout" element={<Checkout/>}  />
-            
-       </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
 
-       
-     </Routes>
-      
+        <Route
+          element={
+            <ProtectedRoute
+              isLoading={!authReady}
+              guestOnly={true}
+            />
+          }>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
+        </Route>
+
+        <Route element={<ProtectedRoute isLoading={!authReady} />} >
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/checkout" element={<Checkout />} />
+
+        </Route>
+
+
+      </Routes>
+
     </div>
   )
 }
