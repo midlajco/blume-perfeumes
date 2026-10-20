@@ -31,7 +31,7 @@ function Bestsellers() {
         </div>
 
         <Link
-          to="/products"
+          to="/shop"
           className="mb-2 hidden border-l border-[#bcb3a8] pl-5 text-xs tracking-wide sm:block"
         >
           VIEW ALL ↗
@@ -89,12 +89,7 @@ function Bestsellers() {
         ))}
       </div>
 
-      <Link
-        to="/shop"
-        className="mt-5 inline-block text-xs tracking-wide sm:hidden"
-      >
-        VIEW ALL ↗
-      </Link>
+     
     </section>
   );
 }

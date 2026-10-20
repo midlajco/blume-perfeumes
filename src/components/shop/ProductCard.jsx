@@ -16,18 +16,7 @@ function ProductCard({ product }) {
           </div>
         </Link>
 
-        <button
-          type="button"
-          aria-label={`Add ${product.name} to wishlist`}
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            // Add wishlist functionality here
-          }}
-          className="absolute right-3 top-3 z-10 rounded-full p-2 text-stone-800 transition hover:scale-110"
-        >
-          <Heart size={22} strokeWidth={1.5} />
-        </button>
+        
       </div>
 
       <div className="space-y-1 pt-3">

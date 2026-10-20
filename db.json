@@ -476,6 +476,14 @@
           "image": "/images/productimage/bergamot.png",
           "category": "Fresh",
           "price": 1799
+        },
+        {
+          "productId": "30",
+          "name": "Silver Rain",
+          "description": "Cool aquatic notes and clean musk evoke the freshness of rain.",
+          "image": "/images/productimage/silver-rain.png",
+          "category": "Fresh",
+          "price": 2099
         }
       ],
       "id": "5zt4i2w79ps"
@@ -695,6 +703,48 @@
       "status": "Pending",
       "createdAt": "2026-10-20T10:32:25.238Z",
       "id": "1zInZ74gyss"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "n",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "asvdsa",
+        "address": "Asda's",
+        "city": "ada",
+        "pincode": "dasva",
+        "paymentMethod": "UPI"
+      },
+      "items": [
+        {
+          "productId": "22",
+          "name": "Green Tea",
+          "price": 1799,
+          "image": "/images/productimage/green-tea.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "quantity": 4
+        },
+        {
+          "productId": "30",
+          "name": "Silver Rain",
+          "price": 2099,
+          "image": "/images/productimage/silver-rain.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 11094,
+      "status": "Pending",
+      "createdAt": "2026-10-20T12:52:31.333Z",
+      "id": "ik0hGmsABSU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
