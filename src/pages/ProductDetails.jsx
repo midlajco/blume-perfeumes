@@ -41,7 +41,7 @@ function ProductDetails() {
             productId: product.id,
             name: product.name,
             description: product.description,
-            description: product.description,
+        
             image: product.image,
             category: product.category,
             price: product.price
@@ -52,7 +52,7 @@ function ProductDetails() {
 
         if (!wishlist) {
             await createWishlist(user.id, newItem)
-            await createWishlist(user.id, newItem)
+           
             return
         }
         const existing = wishlist.items.some((item) => (item.productId) === product.id);
@@ -84,7 +84,7 @@ function ProductDetails() {
             price: product.price,
             image: product.image,
             category: product.category,
-            category: product.category,
+            
             quantity: 1
         }
         const cart = await getCart(user.id);

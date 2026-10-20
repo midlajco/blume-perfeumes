@@ -37,7 +37,7 @@ function Wishlist() {
   if (items.length === 0) {
     return <p className="mt-50 text-center">Your wishlist is empty.</p>;
   }
-  console.log(items)
+
 
 
   const handleRemove = (productId) => {
@@ -58,7 +58,14 @@ function Wishlist() {
       price: product.price,
       quantity: 1
     }
-    await addProductToCart(user.id, newItem)
+    await addProductToCart(user.id, newItem);
+    removeMutation.mutate({
+      wishlistId: wishlist.id,
+      items: items.filter(
+        (item) => (item.productId) !== (newItem.id)
+      ),
+
+    })
     await queryClient.invalidateQueries({
       queryKey: ["cart", user.id],
     });
@@ -66,7 +73,7 @@ function Wishlist() {
   }
 
 
-return (
+  return (
     <main className="min-h-screen bg-[#f6f1e9] text-[#171614]">
 
       {/* Hero */}
@@ -199,9 +206,9 @@ return (
       </section>
     </main>
   )
- 
- 
- 
- 
+
+
+
+
 }
 export default Wishlist

@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Search, ShoppingBag, Heart, UserRound } from "lucide-react";
-import { Profiler } from "react";
+
 
 function Navbar() {
   return (

@@ -511,14 +511,7 @@ function Checkout() {
               </span>
             </div>
 
-            <div className="flex items-center justify-between gap-3">
-              <span className="font-serif text-base text-[#777067]">
-                Tax (9%)
-              </span>
-              <span className="font-serif text-lg">
-                ₹{Math.round(total * 0.09).toLocaleString("en-IN")}
-              </span>
-            </div>
+            
 
           </div>
 
@@ -529,7 +522,7 @@ function Checkout() {
             </span>
 
             <span className="whitespace-nowrap font-serif text-2xl sm:text-3xl">
-              ₹{(total + Math.round(total * 0.09)).toLocaleString("en-IN")}
+              ₹{(total).toLocaleString("en-IN")}
             </span>
           </div>
 

@@ -468,32 +468,7 @@
   "wishlists": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [
-        {
-          "productId": "16",
-          "name": "Lemon Verbena",
-          "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
-          "image": "/images/productimage/lemon-verbena.png",
-          "category": "Fresh",
-          "price": 1799
-        },
-        {
-          "productId": "44",
-          "name": "Blood Orange",
-          "description": "Juicy blood orange and bright citrus peel give this scent a vivid opening.",
-          "image": "/images/productimage/blood-orange.png",
-          "category": "Fresh",
-          "price": 1899
-        },
-        {
-          "productId": "11",
-          "name": "Lotus Dream",
-          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
-          "image": "/images/productimage/lotus-dream.png",
-          "category": "Floral",
-          "price": 1999
-        }
-      ],
+      "items": [],
       "id": "5zt4i2w79ps"
     },
     {
@@ -514,25 +489,22 @@
   "carts": [
     {
       "userId": "7O1xvfMJtow",
+      "items": [],
+      "id": "hTHv0MHcS44"
+    },
+    {
+      "userId": "xUjYuH8GJU0",
       "items": [
         {
-          "productId": "16",
-          "name": "Lemon Verbena",
-          "price": 1799,
-          "image": "/images/productimage/lemon-verbena.png",
-          "category": "Fresh",
-          "quantity": 1
-        },
-        {
-          "productId": "27",
-          "name": "Mandarin Grove",
+          "productId": "44",
+          "name": "Blood Orange",
           "price": 1899,
-          "image": "/images/productimage/mandarin-grove.png",
+          "image": "/images/productimage/blood-orange.png",
           "category": "Fresh",
-          "quantity": 1
+          "quantity": 2
         }
       ],
-      "id": "hTHv0MHcS44"
+      "id": "l2nqa_Y4Oto"
     }
   ],
   "orders": [
@@ -629,6 +601,65 @@
       "status": "Pending",
       "createdAt": "2026-10-20T05:10:05.008Z",
       "id": "gxwgGgQZghc"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "midlaj",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "saas",
+        "pincode": "666",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "quantity": 3
+        },
+        {
+          "productId": "27",
+          "name": "Mandarin Grove",
+          "price": 1899,
+          "image": "/images/productimage/mandarin-grove.png",
+          "category": "Fresh",
+          "quantity": 2
+        },
+        {
+          "productId": "21",
+          "name": "Wild Berry",
+          "price": 1899,
+          "image": "/images/productimage/wild-berry.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "44",
+          "name": "Blood Orange",
+          "price": 1899,
+          "image": "/images/productimage/blood-orange.png",
+          "category": "Fresh",
+          "quantity": 3
+        },
+        {
+          "productId": "11",
+          "name": "Lotus Dream",
+          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+          "price": 1999,
+          "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "quantity": 4
+        }
+      ],
+      "total": 24787,
+      "status": "Pending",
+      "createdAt": "2026-10-20T07:15:13.684Z",
+      "id": "wt7HBRHcExg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
