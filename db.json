@@ -465,11 +465,73 @@
       "stock": 12
     }
   ],
-  "wishlists": [],
+  "wishlists": [
+    {
+      "userId": "7O1xvfMJtow",
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "price": 1799
+        },
+        {
+          "productId": "44",
+          "name": "Blood Orange",
+          "description": "Juicy blood orange and bright citrus peel give this scent a vivid opening.",
+          "image": "/images/productimage/blood-orange.png",
+          "category": "Fresh",
+          "price": 1899
+        },
+        {
+          "productId": "11",
+          "name": "Lotus Dream",
+          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+          "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "price": 1999
+        }
+      ],
+      "id": "5zt4i2w79ps"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "price": 1799
+        }
+      ],
+      "id": "-CbyRiQoe_Q"
+    }
+  ],
   "carts": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [],
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "27",
+          "name": "Mandarin Grove",
+          "price": 1899,
+          "image": "/images/productimage/mandarin-grove.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
       "id": "hTHv0MHcS44"
     }
   ],
@@ -499,6 +561,74 @@
       "status": "Pending",
       "createdAt": "2026-10-20T04:08:57.189Z",
       "id": "OJSYOsWgndo"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "asmas",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "das",
+        "pincode": "55",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "13",
+          "name": "Lavender Sky",
+          "price": 1899,
+          "image": "/images/productimage/lavender-sky.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "24",
+          "name": "Coconut Breeze",
+          "price": 1999,
+          "image": "/images/productimage/coconut-breeze.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "12",
+          "name": "Peony Blush",
+          "price": 2199,
+          "image": "/images/productimage/peony-blush.png",
+          "category": "Floral",
+          "quantity": 1
+        }
+      ],
+      "total": 6097,
+      "status": "Pending",
+      "createdAt": "2026-10-20T05:09:21.840Z",
+      "id": "BlJ5T-V0ipw"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "asmas",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "das",
+        "pincode": "3",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "44",
+          "name": "Blood Orange",
+          "price": 1899,
+          "image": "/images/productimage/blood-orange.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 1899,
+      "status": "Pending",
+      "createdAt": "2026-10-20T05:10:05.008Z",
+      "id": "gxwgGgQZghc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

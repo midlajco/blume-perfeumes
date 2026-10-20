@@ -11,4 +11,5 @@ export async function getOrdersById(userId){
   const response =await axios.get(URL,{
     params:{userId}
   })
+  return response.data
 }
