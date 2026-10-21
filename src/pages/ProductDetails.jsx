@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query"
+import { useQuery, useQueryClient } from "@tanstack/react-query"
 import { getProductById } from "../services/ProductService"
 import { useParams, useNavigate } from "react-router-dom";
 import { createWishlist, getWishList, updateWishlist } from "../services/WishlistService";
@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { createCart, getCart, updateCart } from "../services/CartService";
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 function ProductDetails() {
     const [addedToCart, setAddedTocart] = useState(false)
@@ -13,6 +14,7 @@ function ProductDetails() {
 
     const navigate = useNavigate();
     const location = useLocation();
+    const queryClient = useQueryClient();
     const from = location.state?.from || "/";
 
     const user = useSelector((state) => state.auth.user);
@@ -105,8 +107,9 @@ function ProductDetails() {
 
         if (!wishlist) {
             await createWishlist(user.id, newItem)
+            setAddedToWishList(true)
 
-            return
+            return 
         }
         const existing = wishlist.items.some((item) => (item.productId) === product.id);
         if (existing) {
@@ -119,7 +122,10 @@ function ProductDetails() {
             ...wishlist.items,
             newItem
         ];
+        
         await updateWishlist(wishlist.id, updatedItems)
+         toast.success(`${product.name} added to wishlist!`)
+         setAddedToWishList(true)
 
     }
 
@@ -127,46 +133,56 @@ function ProductDetails() {
 
     const handleAddtoCart = async () => {
         if (!user) {
+            toast.error("Please log in to add items to your cart");
             navigate("/login", {
                 state: { from: { pathname: `/products/${product.id}` } },
             });
             return;
-
         }
+
         const newItem = {
             productId: product.id,
             name: product.name,
             price: product.price,
             image: product.image,
             category: product.category,
-
             quantity: 1
-        }
-        const cart = await getCart(user.id);
-        if (!cart) {
-            await createCart(user.id, newItem);
-            setAddedTocart(true)
-            return
+        };
 
+        try {
+            const cart = await getCart(user.id);
+            if (!cart) {
+                await createCart(user.id, newItem);
+                setAddedTocart(true);
+                await queryClient.invalidateQueries({ queryKey: ["cart", user.id] });
+               
+                return;
+            }
+
+            const items = cart.items || [];
+            let updatedItems;
+            const existingItem = items.some((item) => String(item.productId) === String(product.id));
+
+            if (existingItem) {
+                updatedItems = items.map((item) =>
+                    String(item.productId) === String(product.id)
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                );
+            } else {
+                updatedItems = [...items, newItem];
+            }
+
+            await updateCart(cart.id, updatedItems);
+            setAddedTocart(true);
+            await queryClient.invalidateQueries({ queryKey: ["cart", user.id] });
+            toast.success(`${product.name} added to cart!`
+            );
+        } catch (error) {
+            console.error("Failed to add to cart:", error);
+            toast.error("Failed to add item to cart. Please try again.");
         }
-        const items = cart.items;
-        let updatedItems;
-        const existingItem = cart.items.some((item) => (item.productId) === product.id);
-        if (existingItem) {
-            updatedItems = cart.items.map((item) =>
-                item.productId === product.id
-                    ? { ...item, quantity: item.quantity + 1 }
-                    : item
-            )
-        } else {
-            updatedItems = [
-                ...items,
-                newItem
-            ];
-        }
-        await updateCart(cart.id, updatedItems)
-        setAddedTocart(true);
-    }
+    };
 
     return (
         <main className="min-h-screen bg-[#f7f5f0] text-[#171614]">
@@ -244,7 +260,14 @@ function ProductDetails() {
 
                         {/* Add to wishlist */}
                         <button
-                            onClick={handleAddToWishlist}
+                            onClick={()=>{
+                                if(addedToWishList){
+                                    navigate("/wishlist")
+                                }
+                                else{
+                                    handleAddToWishlist();
+                                }
+                            }}
                             className="mt-2 flex min-h-[58px] w-full items-center justify-center gap-2 border border-[#b8b2aa] bg-transparent px-6 py-4 text-sm transition-colors duration-300 hover:border-[#171614] hover:bg-[#eeeae4]"
                         >
                             <svg

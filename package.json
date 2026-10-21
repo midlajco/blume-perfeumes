@@ -23,6 +23,7 @@
     "react-redux": "^9.3.0",
     "react-router-dom": "^7.18.4",
     "server": "^1.0.42",
+    "sonner": "^2.0.8",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {

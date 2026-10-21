@@ -18,6 +18,7 @@ import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
 import Orders from './pages/Orders'
 import Checkout from './pages/Checkout'
+import { Toaster } from 'sonner'
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
 
   return (
     <div>
+      <Toaster position="top-right" richColors closeButton />
       {!hideNavbar && <Navbar />}
       <Routes>
 

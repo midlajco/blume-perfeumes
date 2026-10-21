@@ -1,11 +1,13 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getWishList, updateWishlist } from '../services/WishlistService'
 import { addProductToCart, createCart, getCart, updateCart } from '../services/CartService'
+import { toast } from 'sonner'
 
 function Wishlist() {
+  const navigate = useNavigate()
   const user = useSelector((state) => state.auth.user)
   const queryClient = useQueryClient()
 
@@ -35,7 +37,7 @@ function Wishlist() {
 
 
   if (items.length === 0) {
-    return <p className="mt-50 text-center">Your wishlist is empty.</p>;
+    return <p className="mt-50 text-center">Your wishlist is empty. <Link to="/shop" >Shop Now</Link></p>;
   }
 
 
@@ -47,30 +49,35 @@ function Wishlist() {
         (item) => (item.productId) !== (productId)
       ),
     });
+    
   };
   const handleAddToCart = async (product) => {
-    const newItem = {
-      id: product.productId,
-      name: product.name,
-      description: product.description,
-      category: product.category,
-      image: product.image,
-      price: product.price,
-      quantity: 1
+    try {
+      const newItem = {
+        id: product.productId,
+        name: product.name,
+        description: product.description,
+        category: product.category,
+        image: product.image,
+        price: product.price,
+        quantity: 1
+      };
+      await addProductToCart(user.id, newItem);
+      removeMutation.mutate({
+        wishlistId: wishlist.id,
+        items: items.filter(
+          (item) => (item.productId) !== (newItem.id)
+        ),
+      });
+      await queryClient.invalidateQueries({
+        queryKey: ["cart", user.id],
+      });
+      toast.success(`${product.name} added to cart!`);
+    } catch (error) {
+      console.error("Failed to add to cart:", error);
+      toast.error("Failed to add item to cart. Please try again.");
     }
-    await addProductToCart(user.id, newItem);
-    removeMutation.mutate({
-      wishlistId: wishlist.id,
-      items: items.filter(
-        (item) => (item.productId) !== (newItem.id)
-      ),
-
-    })
-    await queryClient.invalidateQueries({
-      queryKey: ["cart", user.id],
-    });
-
-  }
+  };
 
 
   return (

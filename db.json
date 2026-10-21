@@ -468,24 +468,7 @@
   "wishlists": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [
-        {
-          "productId": "36",
-          "name": "Bergamot",
-          "description": "Bergamot peel and crisp aromatic notes deliver a bright, versatile scent.",
-          "image": "/images/productimage/bergamot.png",
-          "category": "Fresh",
-          "price": 1799
-        },
-        {
-          "productId": "30",
-          "name": "Silver Rain",
-          "description": "Cool aquatic notes and clean musk evoke the freshness of rain.",
-          "image": "/images/productimage/silver-rain.png",
-          "category": "Fresh",
-          "price": 2099
-        }
-      ],
+      "items": [],
       "id": "5zt4i2w79ps"
     },
     {
@@ -506,7 +489,25 @@
   "carts": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [],
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "11",
+          "name": "Lotus Dream",
+          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+          "price": 1999,
+          "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "quantity": 1
+        }
+      ],
       "id": "hTHv0MHcS44"
     },
     {
