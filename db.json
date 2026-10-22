@@ -4,7 +4,7 @@
       "name": "midlaj",
       "email": "midlaj@gmail.com",
       "password": "12312378",
-      "role":"user",
+      "role": "user",
       "id": "7O1xvfMJtow"
     },
     {
@@ -519,6 +519,20 @@
         }
       ],
       "id": "-CbyRiQoe_Q"
+    },
+    {
+      "userId": "ZleJoxaNXyU",
+      "items": [
+        {
+          "productId": "30",
+          "name": "Silver Rain",
+          "description": "Cool aquatic notes and clean musk evoke the freshness of rain.",
+          "image": "/images/productimage/silver-rain.png",
+          "category": "Fresh",
+          "price": 2099
+        }
+      ],
+      "id": "TP7SNDiT0Ds"
     }
   ],
   "carts": [
@@ -550,6 +564,36 @@
         }
       ],
       "id": "l2nqa_Y4Oto"
+    },
+    {
+      "userId": "ZleJoxaNXyU",
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "30",
+          "name": "Silver Rain",
+          "price": 2099,
+          "image": "/images/productimage/silver-rain.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "37",
+          "name": "Oud Reverie",
+          "price": 2999,
+          "image": "/images/productimage/oud-reverie.png",
+          "category": "Woody",
+          "quantity": 2
+        }
+      ],
+      "id": "u1m8HRaMyhk"
     }
   ],
   "orders": [

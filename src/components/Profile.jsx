@@ -1,5 +1,5 @@
 
-import { Link, Navigate,useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
   X,
   ShoppingBag,
@@ -12,32 +12,33 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/authSlice";
 
-function ProfileSidebar({ isOpen, onClose, user,  }) {
-  const navigate =useNavigate();
-  const dispatch =useDispatch();
+function ProfileSidebar({ isOpen, onClose, user, }) {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   if (!isOpen) return null;
 
-  
-  
+
+
 
   const items = [
     { name: "My Orders", icon: Box, path: "/orders" },
     { name: "Wishlist", icon: Heart, path: "/wishlist" },
-    
+
     { name: "Cart", icon: ShoppingBag, path: "/cart" },
   ];
 
-  const handleLogout = ()=>{
-      const confirmLogout = window.confirm(
-    "Are you sure you want to logout?"
-  );
+  const handleLogout = () => {
+    const confirmLogout = window.confirm(
+      "Are you sure you want to logout?"
+    );
 
-  if (confirmLogout) {
-    dispatch(logout());
-    localStorage.removeItem("userId")
-    onClose();
-    navigate("/")
-  }}
+    if (confirmLogout) {
+      dispatch(logout());
+      localStorage.removeItem("userId")
+      onClose();
+      navigate("/")
+    }
+  }
 
   return (
     <div className="fixed inset-0 z-[100]">
@@ -76,9 +77,8 @@ function ProfileSidebar({ isOpen, onClose, user,  }) {
               key={path}
               to={path}
               onClick={onClose}
-              className={`flex h-10 items-center gap-3 px-2 text-xs hover:bg-[#eee5d9] ${
-                index === 0 ? "bg-[#eee5d9]" : ""
-              }`}
+              className={`flex h-10 items-center gap-3 px-2 text-xs hover:bg-[#eee5d9] ${index === 0 ? "bg-[#eee5d9]" : ""
+                }`}
             >
               <Icon size={15} strokeWidth={1.4} />
               <span className="flex-1">{name}</span>
