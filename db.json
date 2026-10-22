@@ -468,7 +468,40 @@
   "wishlists": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [],
+      "items": [
+        {
+          "productId": "13",
+          "name": "Lavender Sky",
+          "description": "Aromatic lavender and crisp herbal notes feel clean and calming.",
+          "image": "/images/productimage/lavender-sky.png",
+          "category": "Fresh",
+          "price": 1899
+        },
+        {
+          "productId": "19",
+          "name": "Almond Milk",
+          "description": "Soft almond and creamy musk create a gentle, cozy fragrance.",
+          "image": "/images/productimage/almond-milk.png",
+          "category": "Musk",
+          "price": 2099
+        },
+        {
+          "productId": "10",
+          "name": "Velvet Rose",
+          "description": "Lush rose and subtle green notes give this fragrance a refined character.",
+          "image": "/images/productimage/velvet-rose.png",
+          "category": "Floral",
+          "price": 2499
+        },
+        {
+          "productId": "35",
+          "name": "Desert Rose",
+          "description": "Rose warmed by dry amber and spice creates a smooth, sunlit fragrance.",
+          "image": "/images/productimage/desert-rose.png",
+          "category": "Amber",
+          "price": 2499
+        }
+      ],
       "id": "5zt4i2w79ps"
     },
     {
@@ -490,14 +523,6 @@
     {
       "userId": "7O1xvfMJtow",
       "items": [
-        {
-          "productId": "16",
-          "name": "Lemon Verbena",
-          "price": 1799,
-          "image": "/images/productimage/lemon-verbena.png",
-          "category": "Fresh",
-          "quantity": 1
-        },
         {
           "productId": "11",
           "name": "Lotus Dream",

@@ -14,10 +14,11 @@ import { logout } from "../redux/authSlice";
 
 function ProfileSidebar({ isOpen, onClose, user,  }) {
   const navigate =useNavigate();
+  const dispatch =useDispatch();
   if (!isOpen) return null;
 
   
-  const dispatch =useDispatch();
+  
 
   const items = [
     { name: "My Orders", icon: Box, path: "/orders" },
@@ -33,6 +34,7 @@ function ProfileSidebar({ isOpen, onClose, user,  }) {
 
   if (confirmLogout) {
     dispatch(logout());
+    localStorage.removeItem("userId")
     onClose();
     navigate("/")
   }}

@@ -108,7 +108,8 @@ function ProductDetails() {
         if (!wishlist) {
             await createWishlist(user.id, newItem)
             setAddedToWishList(true)
-
+            await queryClient.invalidateQueries({ queryKey: ["wishlist", user.id] })
+            toast.success(`${product.name} added to wishlist!`)
             return 
         }
         const existing = wishlist.items.some((item) => (item.productId) === product.id);
@@ -124,9 +125,9 @@ function ProductDetails() {
         ];
         
         await updateWishlist(wishlist.id, updatedItems)
-         toast.success(`${product.name} added to wishlist!`)
-         setAddedToWishList(true)
-
+        toast.success(`${product.name} added to wishlist!`)
+        setAddedToWishList(true)
+        await queryClient.invalidateQueries({ queryKey: ["wishlist", user.id] })
     }
 
 

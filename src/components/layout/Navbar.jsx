@@ -2,21 +2,39 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Search, ShoppingBag, Heart, UserRound } from "lucide-react";
+import { ShoppingBag, Heart, UserRound } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
 import ProfileSidebar from "../Profile";
+import { getCart } from "../../services/CartService";
+import { getWishList } from "../../services/WishlistService";
 
 function Navbar() {
-  const navigate =useNavigate();
-  const [isProfileOpen,setIsProfileOpen]=useState(false)
-  const handleProfileClick =()=>{
-    if(!user){
-      navigate("/login")
+  const navigate = useNavigate();
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const user = useSelector((state) => state.auth.user);
+
+  const handleProfileClick = () => {
+    if (!user) {
+      navigate("/login");
       return;
     }
-    setIsProfileOpen(true)
-  }
+    setIsProfileOpen(true);
+  };
 
-  const user = useSelector((state) => state.auth.user);
+  const { data: cart } = useQuery({
+    queryKey: ["cart", user?.id],
+    queryFn: () => getCart(user.id),
+    enabled: !!user?.id,
+  });
+
+  const { data: wishlist } = useQuery({
+    queryKey: ["wishlist", user?.id],
+    queryFn: () => getWishList(user.id),
+    enabled: !!user?.id,
+  });
+
+  const cartCount = cart?.items?.length || 0;
+  const wishlistCount = wishlist?.items?.length || 0;
 
   return (
     <nav className="absolute inset-x-0 top-0 z-50 border-b border-black/15 text-stone-900">
@@ -66,23 +84,39 @@ function Navbar() {
             <UserRound size={19} strokeWidth={1.3} />
           </button>
 
-          <Link
-            to="/wishlist"
-            aria-label="Wishlist"
-            className="hidden sm:block"
-          >
+
+
+          <Link to="/wishlist" className="relative hidden sm:block">
             <Heart size={19} strokeWidth={1.3} />
+
+            {wishlistCount > 0 && (
+              <span className="absolute -top-2 -right-2 z-50 flex h-5 min-w-5 items-center justify-center rounded-full bg-black px-1 text-xs text-white">
+                {wishlistCount}
+              </span>
+            )}
+          </Link>
+
+          <Link to="/cart" className="relative flex items-center gap-2">
+            <ShoppingBag size={20} strokeWidth={1.3} />
+
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 z-50 flex h-5 min-w-5 items-center justify-center rounded-full bg-black px-1 text-xs text-white">
+                {cartCount}
+              </span>
+            )}
           </Link>
 
 
-          <Link
+
+
+          {/* <Link
             to="/cart"
             className="flex items-center gap-2"
             aria-label="Shopping bag"
           >
 
             <ShoppingBag size={20} strokeWidth={1.3} />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <ProfileSidebar
