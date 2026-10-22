@@ -4,13 +4,15 @@
       "name": "midlaj",
       "email": "midlaj@gmail.com",
       "password": "12312378",
+      "role":"user",
       "id": "7O1xvfMJtow"
     },
     {
-      "name": "mijo",
-      "email": "mijo@gmail.com",
-      "password": "mijomijo",
-      "id": "xUjYuH8GJU0"
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "741852963",
+      "role": "admin",
+      "id": "ZleJoxaNXyU"
     }
   ],
   "products": [

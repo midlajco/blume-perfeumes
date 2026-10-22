@@ -1,122 +1,6 @@
-// import React, { useState } from 'react'
-// import { validateName, validateEmail, validatePassword, validateConfirmPassword } from '../utils/validation';
-// import { createUser, getUserByEmail } from '../services/UserService';
-
-// function Register() {
-
-//     const [ApiError, setApiError] = useState("");
-//     const [name, setName] = useState("");
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [confirmPass, setConfirmPass] = useState("");
-
-//     const [errors, setErrors] = useState({});
-
-//     function validateForm() {
-//         const newErrors = {
-//             name: validateName(name),
-//             email: validateEmail(email),
-//             password: validatePassword(password),
-//             confirmPass: validateConfirmPassword(password, confirmPass)
-//         };
-
-//         setErrors(newErrors);
-
-//         return !Object.values(newErrors).some(error => error !== "");
-//     }
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         setApiError("");
-//         if (!validateForm()) {
-//             return;
-//         }
-//         try {
-//             const existingUser = await getUserByEmail(email);
-//             if (existingUser) {
-//                 setApiError("Email Already Registered")
-//                 return;
-
-//             }
-//             await createUser({ name, email, password });
-
-//             setName("");
-//             setEmail("");
-//             setPassword("");
-//             setConfirmPass("");
-//             setErrors({});
-//         }
-//         catch (error) {
-
-//             setApiError("Registration failed. Please try again.");
-//         }
-//     }
-
-
-
-
-
-
-
-// return (
-//     <div>
-//         <form onSubmit={handleSubmit} >
-//             <input
-//                 type="text"
-//                 name="name"
-//                 placeholder="Full Name"
-//                 value={name}
-//                 onChange={(e) => setName(e.target.value)}
-//                 required
-//             />
-//             {errors.name && <p className="error">{errors.name}</p>}
-
-//             <input
-//                 type="email"
-//                 name="email"
-//                 placeholder="Email Address"
-//                 value={email}
-//                 onChange={(e) => {setEmail(e.target.value);setApiError("")}}
-//                 required
-//             />
-//             {errors.email && <p className="error">{errors.email}</p>}
-
-
-//             <input
-//                 type="password"
-//                 name="password"
-//                 placeholder="Password"
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//                 minLength={8}
-//                 required
-//             />
-//             {errors.password && <p className="error">{errors.password}</p>}
-
-//             <input
-//                 type="password"
-//                 name="confirmPass"
-//                 placeholder="Confirm Password"
-//                 value={confirmPass}
-//                 onChange={(e) => setConfirmPass(e.target.value)}
-//                 minLength={8}
-//                 required
-//             />
-
-//             {errors.confirmPass && <p className="error">{errors.confirmPass}</p>}
-//             {ApiError && <p>{ApiError}</p>}
-//             <button type='submit' >Register</button>
-//         </form>
-
-//     </div>
-// )
-
-// }
-// export default Register
-
 
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,Navigate, useNavigate } from 'react-router-dom'
 import {
   validateName,
   validateEmail,
@@ -129,6 +13,10 @@ import {
 } from '../services/UserService'
 
 function Register() {
+  
+  const navigate =useNavigate();
+  
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -166,7 +54,7 @@ function Register() {
         return
       }
 
-      await createUser({ name, email, password })
+      await createUser({ name, email, password,role:"user" })
 
       setName('')
       setEmail('')
@@ -174,6 +62,7 @@ function Register() {
       setConfirmPass('')
       setErrors({})
       setSuccess('Account created successfully!')
+     navigate("/login")
     } catch (error) {
       setApiError('Registration failed. Please try again.')
     }
