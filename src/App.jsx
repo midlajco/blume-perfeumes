@@ -29,16 +29,16 @@ import GuestRoutes from './components/routes/GuestRoutes'
 import Userlayout from './components/layout/Userlayout'
 import AdminLayout from './admin/layouts/AdminLayout';
 
+import AdminProducts from './admin/pages/AdminProducts';
+import AdminOrders from './admin/pages/AdminOrders';
+import AdminUsers from './admin/pages/AdminUsers'
 
 
 function App() {
 
   const location = useLocation();
 
-  const hideNavbar =
-    location.pathname === "/login" ||
-    location.pathname === "/register" ||
-    location.pathname.startsWith("/admin");
+
 
   const dispatch = useDispatch();
   const userId = localStorage.getItem("userId");
@@ -73,7 +73,7 @@ function App() {
   return (
     <div>
       <Toaster position="top-right" richColors closeButton />
-      {!hideNavbar && <Navbar />}
+      
       <Routes>
 
 
@@ -109,6 +109,9 @@ function App() {
         <Route element={<AdminProtecetdRoute isLoading={!authReady} role={"admin"} />} >
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
+            <Route path="products" element={<AdminProducts/>}  />
+            <Route path="orders" element={<AdminOrders/>}  />
+            <Route path="users" element={<AdminUsers/>}  />
           </Route>
 
 
