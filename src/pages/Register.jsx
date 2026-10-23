@@ -54,7 +54,7 @@ function Register() {
         return
       }
 
-      await createUser({ name, email, password,role:"user" })
+      await createUser({ name, email, password,role:"user",status:"active" })
 
       setName('')
       setEmail('')

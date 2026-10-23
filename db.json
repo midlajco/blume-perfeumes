@@ -5,6 +5,7 @@
       "email": "midlaj@gmail.com",
       "password": "12312378",
       "role": "user",
+      "status": "blocked",
       "id": "7O1xvfMJtow"
     },
     {
@@ -12,6 +13,7 @@
       "email": "admin@gmail.com",
       "password": "741852963",
       "role": "admin",
+      "status": "active",
       "id": "ZleJoxaNXyU"
     }
   ],
