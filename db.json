@@ -490,20 +490,20 @@
           "price": 2099
         },
         {
-          "productId": "10",
-          "name": "Velvet Rose",
-          "description": "Lush rose and subtle green notes give this fragrance a refined character.",
-          "image": "/images/productimage/velvet-rose.png",
-          "category": "Floral",
-          "price": 2499
-        },
-        {
           "productId": "35",
           "name": "Desert Rose",
           "description": "Rose warmed by dry amber and spice creates a smooth, sunlit fragrance.",
           "image": "/images/productimage/desert-rose.png",
           "category": "Amber",
           "price": 2499
+        },
+        {
+          "productId": "27",
+          "name": "Mandarin Grove",
+          "description": "Juicy mandarin and leafy green notes create a sparkling citrus fragrance.",
+          "image": "/images/productimage/mandarin-grove.png",
+          "category": "Fresh",
+          "price": 1899
         }
       ],
       "id": "5zt4i2w79ps"
@@ -547,6 +547,15 @@
           "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
           "price": 1999,
           "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "quantity": 1
+        },
+        {
+          "productId": "10",
+          "name": "Velvet Rose",
+          "description": "Lush rose and subtle green notes give this fragrance a refined character.",
+          "price": 2499,
+          "image": "/images/productimage/velvet-rose.png",
           "category": "Floral",
           "quantity": 1
         }
