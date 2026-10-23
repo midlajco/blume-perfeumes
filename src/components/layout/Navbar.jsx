@@ -37,7 +37,7 @@ function Navbar() {
   const wishlistCount = wishlist?.items?.length || 0;
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-50 border-b border-black/15 text-stone-900">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/15 bg-[#151311] text-[#c5c0ba]">
       <div className="mx-auto flex h-20 items-center justify-between px-5 md:px-10 lg:px-[4.5%]">
 
         {/* Brand */}

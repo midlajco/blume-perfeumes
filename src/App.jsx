@@ -13,12 +13,21 @@ import { getUserById } from './services/UserService'
 
 import { login } from './redux/authSlice'
 import { useDispatch } from 'react-redux'
-import ProtectedRoute from './components/ProtectedRoute'
+import ProtectedRoute from './components/routes/CustomerProtectedRoute'
 import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
 import Orders from './pages/Orders'
 import Checkout from './pages/Checkout'
 import { Toaster } from 'sonner'
+
+import Dashboard from "./pages/admin/Dashboard"
+import CustomerProtectedRoute from './components/routes/CustomerProtectedRoute'
+import AdminProtecetdRoute from './components/routes/AdminProtecetdRoute'
+import AdminProducts from './pages/admin/AdminProducts'
+import PublicRoutes from './components/routes/PublicRoutes'
+import GuestRoutes from './components/routes/GuestRoutes'
+import Userlayout from './components/layout/Userlayout'
+import AdminLayout from './components/layout/AdminLayout'
 
 
 function App() {
@@ -27,7 +36,8 @@ function App() {
 
   const hideNavbar =
     location.pathname === "/login" ||
-    location.pathname === "/register";
+    location.pathname === "/register" ||
+    location.pathname.startsWith("/admin");
 
   const dispatch = useDispatch();
   const userId = localStorage.getItem("userId");
@@ -65,30 +75,40 @@ function App() {
       {!hideNavbar && <Navbar />}
       <Routes>
 
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
 
-        <Route
-          element={
-            <ProtectedRoute
-              isLoading={!authReady}
-              guestOnly={true}
-            />
-          }>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+        <Route element={<Userlayout />}>
+
+          {/* public */}
+          <Route element={<PublicRoutes isLoading={!authReady} />} >
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+          </Route>
+
+          {/* guestOnly */}
+          <Route element={<GuestRoutes isLoading={!authReady} />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Route>
+
+          {/* customeronly */}
+          <Route element={<CustomerProtectedRoute isLoading={!authReady} guestOnly={false} role={"user"} />} >
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/checkout" element={<Checkout />} />
+
+          </Route>
+
 
         </Route>
 
-        <Route element={<ProtectedRoute isLoading={!authReady} />} >
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/checkout" element={<Checkout />} />
 
+        <Route element={<AdminLayout />} >
+          <Route element={<AdminProtecetdRoute isLoading={!authReady} role={"admin"} />} >
+            <Route path="/admin" element={<AdminProducts />} />
+          </Route>
         </Route>
-
 
       </Routes>
 
