@@ -13,21 +13,22 @@ import { getUserById } from './services/UserService'
 
 import { login } from './redux/authSlice'
 import { useDispatch } from 'react-redux'
-import ProtectedRoute from './components/routes/CustomerProtectedRoute'
+
 import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
 import Orders from './pages/Orders'
 import Checkout from './pages/Checkout'
 import { Toaster } from 'sonner'
 
-import Dashboard from "./pages/admin/Dashboard"
+import Dashboard from "./admin/pages/Dashboard"
 import CustomerProtectedRoute from './components/routes/CustomerProtectedRoute'
 import AdminProtecetdRoute from './components/routes/AdminProtecetdRoute'
-import AdminProducts from './pages/admin/AdminProducts'
+
 import PublicRoutes from './components/routes/PublicRoutes'
 import GuestRoutes from './components/routes/GuestRoutes'
 import Userlayout from './components/layout/Userlayout'
-import AdminLayout from './components/layout/AdminLayout'
+import AdminLayout from './admin/layouts/AdminLayout';
+
 
 
 function App() {
@@ -104,11 +105,15 @@ function App() {
         </Route>
 
 
-        <Route element={<AdminLayout />} >
-          <Route element={<AdminProtecetdRoute isLoading={!authReady} role={"admin"} />} >
-            <Route path="/admin" element={<AdminProducts />} />
+
+        <Route element={<AdminProtecetdRoute isLoading={!authReady} role={"admin"} />} >
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
           </Route>
+
+
         </Route>
+
 
       </Routes>
 

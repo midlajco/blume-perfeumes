@@ -14,7 +14,7 @@ function AdminProtecetdRoute({ isLoading ,role}) {
             replace
             state={{ from: location }} />
     }
-   if(user.role !== role){
+   if(user.role !== "admin"){
     return <Navigate to="/" replace />
    } 
    return <Outlet/>

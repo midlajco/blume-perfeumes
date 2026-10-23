@@ -3,7 +3,7 @@ import { useLocation, Navigate, Outlet } from "react-router-dom"
 
 
 
-function CustomerProtectedRoute({ isLoading ,role="user"}) {
+function CustomerProtectedRoute({ isLoading }) {
     const location = useLocation();
     const user = useSelector((state) => state.auth.user)
 
@@ -16,7 +16,7 @@ function CustomerProtectedRoute({ isLoading ,role="user"}) {
             replace
             state={{ from: location }} />
     }
-    if(user.role !== role){
+    if(user.role !== "user"){
         return <Navigate to="/admin" replace />
     }
     return (
