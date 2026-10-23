@@ -86,7 +86,7 @@ function Checkout() {
       items: items,
       total: total,
       status: "Pending",
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString().split("T")[0],
     };
     orderMutation.mutate(orderData)
     

@@ -630,7 +630,7 @@
         }
       ],
       "total": 23387,
-      "status": "Pending",
+      "status": "pending",
       "createdAt": "2026-10-20T04:08:57.189Z",
       "id": "OJSYOsWgndo"
     },
@@ -672,7 +672,7 @@
         }
       ],
       "total": 6097,
-      "status": "Pending",
+      "status": "shipped",
       "createdAt": "2026-10-20T05:09:21.840Z",
       "id": "BlJ5T-V0ipw"
     },
@@ -698,7 +698,7 @@
         }
       ],
       "total": 1899,
-      "status": "Pending",
+      "status": "delivered",
       "createdAt": "2026-10-20T05:10:05.008Z",
       "id": "gxwgGgQZghc"
     },
@@ -757,7 +757,7 @@
         }
       ],
       "total": 24787,
-      "status": "Pending",
+      "status": "cancelled",
       "createdAt": "2026-10-20T07:15:13.684Z",
       "id": "wt7HBRHcExg"
     },
@@ -783,7 +783,7 @@
         }
       ],
       "total": 10794,
-      "status": "Pending",
+      "status": "pending",
       "createdAt": "2026-10-20T10:32:25.238Z",
       "id": "1zInZ74gyss"
     },
@@ -825,7 +825,7 @@
         }
       ],
       "total": 11094,
-      "status": "Pending",
+      "status": "pending",
       "createdAt": "2026-10-20T12:52:31.333Z",
       "id": "ik0hGmsABSU"
     }
