@@ -178,7 +178,7 @@
       "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
       "price": 1799,
       "stock": 25,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "17",
@@ -268,7 +268,7 @@
       "description": "Smoky oud and warming spices form a bold, long-lasting woody profile.",
       "price": 2999,
       "stock": 5,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "26",
@@ -521,13 +521,13 @@
       "isDeleted": false
     },
     {
-      "name": "new",
-      "category": "",
+      "name": "jisan",
+      "category": "Fresh",
       "description": "gbhnj",
       "price": 99,
       "stock": 85,
       "image": "/images/productimage/citrus-embers.png",
-      "isDeleted": false,
+      "isDeleted": true,
       "id": "cCeKqZtFNRc"
     },
     {
@@ -537,7 +537,7 @@
       "price": 852,
       "stock": 988,
       "image": "/images/productimage/citrus-embers.png",
-      "isDeleted": false,
+      "isDeleted": true,
       "id": "ubj7dBIP5k0"
     }
   ],
@@ -702,7 +702,7 @@
         }
       ],
       "total": 23387,
-      "status": "pending",
+      "status": "cancelled",
       "createdAt": "2026-10-20T04:08:57.189Z",
       "id": "OJSYOsWgndo"
     },
@@ -744,7 +744,7 @@
         }
       ],
       "total": 6097,
-      "status": "shipped",
+      "status": "delivered",
       "createdAt": "2026-10-20T05:09:21.840Z",
       "id": "BlJ5T-V0ipw"
     },
@@ -770,7 +770,7 @@
         }
       ],
       "total": 1899,
-      "status": "delivered",
+      "status": "cancelled",
       "createdAt": "2026-10-20T05:10:05.008Z",
       "id": "gxwgGgQZghc"
     },
@@ -897,7 +897,7 @@
         }
       ],
       "total": 11094,
-      "status": "pending",
+      "status": "shipped",
       "createdAt": "2026-10-20T12:52:31.333Z",
       "id": "ik0hGmsABSU"
     }
