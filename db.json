@@ -38,7 +38,7 @@
       "description": "Fresh rose petals blend with a delicate powdery note for a romantic scent.",
       "price": 2299,
       "stock": 18,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "3",
@@ -58,7 +58,7 @@
       "description": "Bright citrus zest meets airy blossoms for a clean everyday fragrance.",
       "price": 1899,
       "stock": 22,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "5",
@@ -68,7 +68,7 @@
       "description": "Cool marine notes and a breezy mineral accord evoke the sea air.",
       "price": 1999,
       "stock": 16,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "6",
@@ -78,7 +78,7 @@
       "description": "Creamy sandalwood and gentle spice settle into a calm, polished trail.",
       "price": 2699,
       "stock": 9,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "7",
@@ -88,7 +88,7 @@
       "description": "Rich amber, dark resins, and a touch of spice create a deep evening scent.",
       "price": 2799,
       "stock": 7,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "8",
@@ -98,7 +98,7 @@
       "description": "Clean white musk wraps the skin in a soft, understated scent.",
       "price": 2199,
       "stock": 20,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "9",
@@ -108,7 +108,7 @@
       "description": "Velvety jasmine petals bring an elegant floral heart with a smooth finish.",
       "price": 2399,
       "stock": 13,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "10",
@@ -118,7 +118,7 @@
       "description": "Lush rose and subtle green notes give this fragrance a refined character.",
       "price": 2499,
       "stock": 10,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "11",
@@ -128,7 +128,7 @@
       "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
       "price": 1999,
       "stock": 17,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "12",
@@ -138,7 +138,7 @@
       "description": "Fresh peony blooms and a hint of fruit make a soft, cheerful scent.",
       "price": 2199,
       "stock": 15,
-      "isDeleted": false
+      "isDeleted": true
     },
     {
       "id": "13",

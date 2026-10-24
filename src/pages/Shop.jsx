@@ -23,7 +23,7 @@ function Shop() {
         return <p>No Products Available</p>
     }
     const filteredProducts =
-        products.filter((product) => product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
+        products.filter((product)=>product.isDeleted===false).filter((product) => product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
             .filter((product) => category === "All" || product.category === category)
             .sort((a, b) => {
                 if (sortBy === "Low") return a.price - b.price;
