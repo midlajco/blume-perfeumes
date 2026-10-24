@@ -117,6 +117,7 @@ function App() {
             <Route path="users" element={<AdminUsers/>}  />
             <Route path="trash" element={<ProductTrash/>}  />
             <Route path="newProduct" element={<NewProduct/>}  />
+            <Route path="editProduct/:id" element={<NewProduct/>}  />
             <Route path="profile" element={<AdminProfile/>}  />
 
           </Route>

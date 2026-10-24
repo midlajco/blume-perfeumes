@@ -9,7 +9,7 @@ function AdminProfile() {
     <div>
         <h1>welcome</h1>
         <h1>{user?.name}</h1>
-        <button onClick={()=>dispatch(logout())} >logout</button>
+        <button onClick={()=>{dispatch(logout());localStorage.removeItem("userId") } } >logout</button>
 
     </div>
   )

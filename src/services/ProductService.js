@@ -31,6 +31,10 @@ export const restoreProductById = async (id) => {
 
   return response.data;
 };
+export const updateProductById = async (id, product) => {
+  const response = await axios.patch(`${URL}/${id}`, product);
+  return response.data;
+};
 export const getDeletedProducts=async()=>{
   const response =await axios.get(`${URL}?isDeleted=true`);
   return response.data;

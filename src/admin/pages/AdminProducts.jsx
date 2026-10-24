@@ -1,12 +1,13 @@
 import { QueryClient, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import React from 'react'
 import { deleteProductById, getProducts, SoftDeleteProductById } from '../../services/ProductService'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function AdminProducts() {
   
  const queryClient =useQueryClient();
+ const navigate=useNavigate();
  
    const {data:products,isLoading,isError} =useQuery({
     queryFn:getProducts,
@@ -28,6 +29,7 @@ function AdminProducts() {
         <div key={product.id} className='border m-2 p-2'>
           <h3>{product.name}</h3>
           <h3>{product.price}</h3>
+          <button onClick={()=>navigate(`/admin/editProduct/${product.id}`)} >edit</button>
           <button className='bg-red-200' onClick={()=>SoftdeleteMutation.mutate(product.id)}  >delete</button>
         </div>
         
