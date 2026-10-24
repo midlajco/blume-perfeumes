@@ -6,7 +6,8 @@
       "password": "12312378",
       "role": "user",
       "status": "blocked",
-      "id": "7O1xvfMJtow"
+      "id": "7O1xvfMJtow",
+      "blocked": true
     },
     {
       "name": "admin",
@@ -14,7 +15,8 @@
       "password": "741852963",
       "role": "admin",
       "status": "active",
-      "id": "ZleJoxaNXyU"
+      "id": "ZleJoxaNXyU",
+      "blocked": true
     }
   ],
   "products": [
@@ -25,7 +27,8 @@
       "category": "Floral",
       "description": "A luminous bouquet of white petals with a soft, graceful finish.",
       "price": 2499,
-      "stock": 14
+      "stock": 14,
+      "isDeleted": true
     },
     {
       "id": "2",
@@ -34,7 +37,8 @@
       "category": "Floral",
       "description": "Fresh rose petals blend with a delicate powdery note for a romantic scent.",
       "price": 2299,
-      "stock": 18
+      "stock": 18,
+      "isDeleted": false
     },
     {
       "id": "3",
@@ -43,7 +47,8 @@
       "category": "Amber",
       "description": "Creamy vanilla and warm amber create a smooth, comforting fragrance.",
       "price": 2399,
-      "stock": 11
+      "stock": 11,
+      "isDeleted": true
     },
     {
       "id": "4",
@@ -52,7 +57,8 @@
       "category": "Fresh",
       "description": "Bright citrus zest meets airy blossoms for a clean everyday fragrance.",
       "price": 1899,
-      "stock": 22
+      "stock": 22,
+      "isDeleted": false
     },
     {
       "id": "5",
@@ -61,7 +67,8 @@
       "category": "Fresh",
       "description": "Cool marine notes and a breezy mineral accord evoke the sea air.",
       "price": 1999,
-      "stock": 16
+      "stock": 16,
+      "isDeleted": false
     },
     {
       "id": "6",
@@ -70,7 +77,8 @@
       "category": "Woody",
       "description": "Creamy sandalwood and gentle spice settle into a calm, polished trail.",
       "price": 2699,
-      "stock": 9
+      "stock": 9,
+      "isDeleted": false
     },
     {
       "id": "7",
@@ -79,7 +87,8 @@
       "category": "Amber",
       "description": "Rich amber, dark resins, and a touch of spice create a deep evening scent.",
       "price": 2799,
-      "stock": 7
+      "stock": 7,
+      "isDeleted": false
     },
     {
       "id": "8",
@@ -88,7 +97,8 @@
       "category": "Musk",
       "description": "Clean white musk wraps the skin in a soft, understated scent.",
       "price": 2199,
-      "stock": 20
+      "stock": 20,
+      "isDeleted": false
     },
     {
       "id": "9",
@@ -97,7 +107,8 @@
       "category": "Floral",
       "description": "Velvety jasmine petals bring an elegant floral heart with a smooth finish.",
       "price": 2399,
-      "stock": 13
+      "stock": 13,
+      "isDeleted": false
     },
     {
       "id": "10",
@@ -106,7 +117,8 @@
       "category": "Floral",
       "description": "Lush rose and subtle green notes give this fragrance a refined character.",
       "price": 2499,
-      "stock": 10
+      "stock": 10,
+      "isDeleted": false
     },
     {
       "id": "11",
@@ -115,7 +127,8 @@
       "category": "Floral",
       "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
       "price": 1999,
-      "stock": 17
+      "stock": 17,
+      "isDeleted": false
     },
     {
       "id": "12",
@@ -124,7 +137,8 @@
       "category": "Floral",
       "description": "Fresh peony blooms and a hint of fruit make a soft, cheerful scent.",
       "price": 2199,
-      "stock": 15
+      "stock": 15,
+      "isDeleted": false
     },
     {
       "id": "13",
@@ -133,7 +147,8 @@
       "category": "Fresh",
       "description": "Aromatic lavender and crisp herbal notes feel clean and calming.",
       "price": 1899,
-      "stock": 21
+      "stock": 21,
+      "isDeleted": false
     },
     {
       "id": "14",
@@ -142,7 +157,8 @@
       "category": "Fresh",
       "description": "Salty air, mineral notes, and a hint of citrus create a breezy coastal scent.",
       "price": 1999,
-      "stock": 19
+      "stock": 19,
+      "isDeleted": false
     },
     {
       "id": "15",
@@ -151,7 +167,8 @@
       "category": "Woody",
       "description": "Green fig blends with dry cedarwood for a modern, balanced fragrance.",
       "price": 2599,
-      "stock": 8
+      "stock": 8,
+      "isDeleted": false
     },
     {
       "id": "16",
@@ -160,7 +177,8 @@
       "category": "Fresh",
       "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
       "price": 1799,
-      "stock": 25
+      "stock": 25,
+      "isDeleted": false
     },
     {
       "id": "17",
@@ -169,7 +187,8 @@
       "category": "Woody",
       "description": "Sandalwood, soft woods, and a warm skin-like base create a quiet signature.",
       "price": 2699,
-      "stock": 12
+      "stock": 12,
+      "isDeleted": false
     },
     {
       "id": "18",
@@ -178,7 +197,8 @@
       "category": "Fresh",
       "description": "Bitter orange blossom and fresh neroli bring a sunny, sparkling feel.",
       "price": 2199,
-      "stock": 16
+      "stock": 16,
+      "isDeleted": false
     },
     {
       "id": "19",
@@ -187,7 +207,8 @@
       "category": "Musk",
       "description": "Soft almond and creamy musk create a gentle, cozy fragrance.",
       "price": 2099,
-      "stock": 14
+      "stock": 14,
+      "isDeleted": false
     },
     {
       "id": "20",
@@ -196,7 +217,8 @@
       "category": "Amber",
       "description": "Dark florals and warm resinous notes give this scent a bold, mysterious edge.",
       "price": 2899,
-      "stock": 6
+      "stock": 6,
+      "isDeleted": false
     },
     {
       "id": "21",
@@ -205,7 +227,8 @@
       "category": "Fresh",
       "description": "Juicy berries and crisp green notes make a lively, fruit-fresh fragrance.",
       "price": 1899,
-      "stock": 23
+      "stock": 23,
+      "isDeleted": false
     },
     {
       "id": "22",
@@ -214,7 +237,8 @@
       "category": "Fresh",
       "description": "Green tea leaves and citrus notes create a refreshing, airy scent.",
       "price": 1799,
-      "stock": 24
+      "stock": 24,
+      "isDeleted": false
     },
     {
       "id": "23",
@@ -223,7 +247,8 @@
       "category": "Floral",
       "description": "Exotic ylang-ylang and creamy petals lend a rich, sun-warmed floral character.",
       "price": 2499,
-      "stock": 9
+      "stock": 9,
+      "isDeleted": false
     },
     {
       "id": "24",
@@ -232,7 +257,8 @@
       "category": "Fresh",
       "description": "Fresh coconut water and light tropical notes feel relaxed and breezy.",
       "price": 1999,
-      "stock": 18
+      "stock": 18,
+      "isDeleted": false
     },
     {
       "id": "25",
@@ -241,7 +267,8 @@
       "category": "Woody",
       "description": "Smoky oud and warming spices form a bold, long-lasting woody profile.",
       "price": 2999,
-      "stock": 5
+      "stock": 5,
+      "isDeleted": false
     },
     {
       "id": "26",
@@ -250,7 +277,8 @@
       "category": "Floral",
       "description": "Creamy tuberose blooms with a lush white-floral heart.",
       "price": 2599,
-      "stock": 8
+      "stock": 8,
+      "isDeleted": false
     },
     {
       "id": "27",
@@ -259,7 +287,8 @@
       "category": "Fresh",
       "description": "Juicy mandarin and leafy green notes create a sparkling citrus fragrance.",
       "price": 1899,
-      "stock": 20
+      "stock": 20,
+      "isDeleted": false
     },
     {
       "id": "28",
@@ -268,7 +297,8 @@
       "category": "Floral",
       "description": "Powdery violet and soft petals create an elegant, airy floral veil.",
       "price": 2299,
-      "stock": 12
+      "stock": 12,
+      "isDeleted": false
     },
     {
       "id": "29",
@@ -277,7 +307,8 @@
       "category": "Woody",
       "description": "Earthy patchouli and dry woods give this fragrance depth and character.",
       "price": 2499,
-      "stock": 10
+      "stock": 10,
+      "isDeleted": false
     },
     {
       "id": "30",
@@ -286,7 +317,8 @@
       "category": "Fresh",
       "description": "Cool aquatic notes and clean musk evoke the freshness of rain.",
       "price": 2099,
-      "stock": 17
+      "stock": 17,
+      "isDeleted": false
     },
     {
       "id": "31",
@@ -295,7 +327,8 @@
       "category": "Amber",
       "description": "Dark petals, warm amber, and subtle woods create an alluring evening scent.",
       "price": 2799,
-      "stock": 7
+      "stock": 7,
+      "isDeleted": false
     },
     {
       "id": "32",
@@ -304,7 +337,8 @@
       "category": "Amber",
       "description": "Golden amber and smooth vanilla form a rich, sweet, enveloping fragrance.",
       "price": 2599,
-      "stock": 13
+      "stock": 13,
+      "isDeleted": false
     },
     {
       "id": "33",
@@ -313,7 +347,8 @@
       "category": "Musk",
       "description": "A soft blend of musk and creamy woods feels warm and close to the skin.",
       "price": 2399,
-      "stock": 15
+      "stock": 15,
+      "isDeleted": false
     },
     {
       "id": "34",
@@ -322,7 +357,8 @@
       "category": "Floral",
       "description": "Airy freesia and dewy green notes create a fresh, delicate floral scent.",
       "price": 2199,
-      "stock": 18
+      "stock": 18,
+      "isDeleted": false
     },
     {
       "id": "35",
@@ -331,7 +367,8 @@
       "category": "Amber",
       "description": "Rose warmed by dry amber and spice creates a smooth, sunlit fragrance.",
       "price": 2499,
-      "stock": 11
+      "stock": 11,
+      "isDeleted": false
     },
     {
       "id": "36",
@@ -340,7 +377,8 @@
       "category": "Fresh",
       "description": "Bergamot peel and crisp aromatic notes deliver a bright, versatile scent.",
       "price": 1799,
-      "stock": 26
+      "stock": 26,
+      "isDeleted": false
     },
     {
       "id": "37",
@@ -349,7 +387,8 @@
       "category": "Woody",
       "description": "Polished oud, dry cedar, and gentle resin create a sophisticated woody trail.",
       "price": 2999,
-      "stock": 6
+      "stock": 6,
+      "isDeleted": false
     },
     {
       "id": "38",
@@ -358,7 +397,8 @@
       "category": "Fresh",
       "description": "Sparkling pink pepper and bright citrus give this fragrance a lively lift.",
       "price": 1999,
-      "stock": 19
+      "stock": 19,
+      "isDeleted": false
     },
     {
       "id": "39",
@@ -367,7 +407,8 @@
       "category": "Amber",
       "description": "Tonka bean, vanilla, and soft spice create a warm gourmand fragrance.",
       "price": 2499,
-      "stock": 12
+      "stock": 12,
+      "isDeleted": false
     },
     {
       "id": "40",
@@ -376,7 +417,8 @@
       "category": "Musk",
       "description": "Elegant iris and clean musk create a smooth, powdery, understated scent.",
       "price": 2399,
-      "stock": 10
+      "stock": 10,
+      "isDeleted": false
     },
     {
       "id": "41",
@@ -385,7 +427,8 @@
       "category": "Amber",
       "description": "Sweet vanilla and golden amber melt into a cozy, lasting base.",
       "price": 2399,
-      "stock": 16
+      "stock": 16,
+      "isDeleted": false
     },
     {
       "id": "42",
@@ -394,7 +437,8 @@
       "category": "Woody",
       "description": "Herbal sage and pale woods create a crisp, grounded, modern fragrance.",
       "price": 2299,
-      "stock": 14
+      "stock": 14,
+      "isDeleted": false
     },
     {
       "id": "43",
@@ -403,7 +447,8 @@
       "category": "Floral",
       "description": "Delicate cherry blossoms and fresh fruit notes create a light springtime scent.",
       "price": 2199,
-      "stock": 17
+      "stock": 17,
+      "isDeleted": false
     },
     {
       "id": "44",
@@ -412,7 +457,8 @@
       "category": "Fresh",
       "description": "Juicy blood orange and bright citrus peel give this scent a vivid opening.",
       "price": 1899,
-      "stock": 22
+      "stock": 22,
+      "isDeleted": false
     },
     {
       "id": "45",
@@ -421,7 +467,8 @@
       "category": "Woody",
       "description": "Soft leather notes and smoky woods create a smooth, confident fragrance.",
       "price": 2799,
-      "stock": 8
+      "stock": 8,
+      "isDeleted": false
     },
     {
       "id": "46",
@@ -430,7 +477,8 @@
       "category": "Amber",
       "description": "Aromatic cardamom and warm amber create a spicy, inviting scent.",
       "price": 2499,
-      "stock": 13
+      "stock": 13,
+      "isDeleted": false
     },
     {
       "id": "47",
@@ -439,7 +487,8 @@
       "category": "Floral",
       "description": "Classic rose meets gentle tea notes for a fresh, graceful floral fragrance.",
       "price": 2299,
-      "stock": 15
+      "stock": 15,
+      "isDeleted": false
     },
     {
       "id": "48",
@@ -448,7 +497,8 @@
       "category": "Fresh",
       "description": "Watery lotus and cool aquatic notes create a clean, tranquil scent.",
       "price": 2099,
-      "stock": 18
+      "stock": 18,
+      "isDeleted": false
     },
     {
       "id": "49",
@@ -457,7 +507,8 @@
       "category": "Woody",
       "description": "Light woods and refined oud create a balanced, elegant woody fragrance.",
       "price": 2899,
-      "stock": 7
+      "stock": 7,
+      "isDeleted": false
     },
     {
       "id": "50",
@@ -466,7 +517,28 @@
       "category": "Amber",
       "description": "Bright citrus settles into a warm amber base for a fresh-to-warm contrast.",
       "price": 2299,
-      "stock": 12
+      "stock": 12,
+      "isDeleted": false
+    },
+    {
+      "name": "new",
+      "category": "",
+      "description": "gbhnj",
+      "price": 99,
+      "stock": 85,
+      "image": "/images/productimage/citrus-embers.png",
+      "isDeleted": false,
+      "id": "cCeKqZtFNRc"
+    },
+    {
+      "name": "new",
+      "category": "Fresh",
+      "description": "dfsadsf",
+      "price": 852,
+      "stock": 988,
+      "image": "/images/productimage/citrus-embers.png",
+      "isDeleted": false,
+      "id": "ubj7dBIP5k0"
     }
   ],
   "wishlists": [

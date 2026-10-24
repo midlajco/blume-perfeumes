@@ -32,6 +32,9 @@ import AdminLayout from './admin/layouts/AdminLayout';
 import AdminProducts from './admin/pages/AdminProducts';
 import AdminOrders from './admin/pages/AdminOrders';
 import AdminUsers from './admin/pages/AdminUsers'
+import ProductTrash from './admin/components/ProductTrash'
+import NewProduct from './admin/components/NewProduct'
+import AdminProfile from './admin/components/adminProfile'
 
 
 function App() {
@@ -112,6 +115,10 @@ function App() {
             <Route path="products" element={<AdminProducts/>}  />
             <Route path="orders" element={<AdminOrders/>}  />
             <Route path="users" element={<AdminUsers/>}  />
+            <Route path="trash" element={<ProductTrash/>}  />
+            <Route path="newProduct" element={<NewProduct/>}  />
+            <Route path="profile" element={<AdminProfile/>}  />
+
           </Route>
 
 
