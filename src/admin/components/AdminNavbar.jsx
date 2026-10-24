@@ -16,26 +16,16 @@ function AdminNavbar({ onToggleSidebar }) {
         <Menu size={21} />
       </button>
 
-      <div className="flex items-center gap-5">
-        <button
-          type="button"
-          aria-label="Notifications"
-          className="text-[#454139] hover:text-black"
-        >
-          <Bell size={20} />
-        </button>
+      <div className="flex items-center gap-2 pr-5">
+       
 
-        <button
-        onClick={()=>navigate("/admin/profile")}
-          type="button"
-          className="flex items-center gap-2 text-sm text-[#292824]"
-        >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#e4d5c0]">
+       
+          <span className="flex h-9 w-7 items-center justify-center rounded-full bg-[#e4d5c0]">
             {user?.name[0]}
           </span>
           <span>{user?.name}</span>
-          <ChevronDown size={16} />
-        </button>
+         
+       
       </div>
     </header>
   );
