@@ -2,7 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getOrdersById } from "../services/OrderService";
+import { getOrdersByUser} from "../services/OrderService";
 
 function Orders() {
   const user = useSelector((state) => state.auth.user);
@@ -13,7 +13,7 @@ function Orders() {
     isError,
   } = useQuery({
     queryKey: ["orders", user?.id],
-    queryFn: () => getOrdersById(user.id),
+    queryFn: () => getOrdersByUser(user.id),
     enabled: !!user,
   });
 

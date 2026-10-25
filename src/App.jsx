@@ -34,7 +34,8 @@ import AdminOrders from './admin/pages/AdminOrders';
 import AdminUsers from './admin/pages/AdminUsers'
 import ProductTrash from './admin/components/ProductTrash'
 import NewProduct from './admin/components/NewProduct'
-import AdminProfile from './admin/components/adminProfile'
+import AdminOrderDetails from './admin/components/AdminOrderDetails'
+
 
 
 function App() {
@@ -118,7 +119,7 @@ function App() {
             <Route path="trash" element={<ProductTrash/>}  />
             <Route path="newProduct" element={<NewProduct/>}  />
             <Route path="editProduct/:id" element={<NewProduct/>}  />
-            <Route path="profile" element={<AdminProfile/>}  />
+            <Route path="orders/:id" element={<AdminOrderDetails/>}  />
 
           </Route>
 

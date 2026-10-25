@@ -12,7 +12,7 @@ export async function placeOrder(orderData) {
   return response.data;
 }
 
-export async function getOrdersById(userId){
+export async function getOrdersByUser(userId){
   const response =await axios.get(URL,{
     params:{userId}
   })
@@ -20,5 +20,9 @@ export async function getOrdersById(userId){
 }
 export async function changeOrderStatus({orderId,status}){
   const response =await axios.patch(`${URL}/${orderId}`,{status:status});
+  return response.data
+}
+export async function getOrdersById(orderId){
+  const response =await axios.get(`${URL}/${orderId}`)
   return response.data
 }
