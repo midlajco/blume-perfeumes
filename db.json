@@ -58,7 +58,7 @@
       "description": "Bright citrus zest meets airy blossoms for a clean everyday fragrance.",
       "price": 1899,
       "stock": 22,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "5",
@@ -68,7 +68,7 @@
       "description": "Cool marine notes and a breezy mineral accord evoke the sea air.",
       "price": 1999,
       "stock": 16,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "6",
@@ -78,7 +78,7 @@
       "description": "Creamy sandalwood and gentle spice settle into a calm, polished trail.",
       "price": 2699,
       "stock": 9,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "7",
@@ -88,7 +88,7 @@
       "description": "Rich amber, dark resins, and a touch of spice create a deep evening scent.",
       "price": 2799,
       "stock": 7,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "8",
@@ -98,7 +98,7 @@
       "description": "Clean white musk wraps the skin in a soft, understated scent.",
       "price": 2199,
       "stock": 20,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "9",
@@ -108,7 +108,7 @@
       "description": "Velvety jasmine petals bring an elegant floral heart with a smooth finish.",
       "price": 2399,
       "stock": 13,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "10",
@@ -118,7 +118,7 @@
       "description": "Lush rose and subtle green notes give this fragrance a refined character.",
       "price": 2499,
       "stock": 10,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "11",
@@ -128,7 +128,7 @@
       "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
       "price": 1999,
       "stock": 17,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "12",
@@ -138,7 +138,7 @@
       "description": "Fresh peony blooms and a hint of fruit make a soft, cheerful scent.",
       "price": 2199,
       "stock": 15,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "13",
@@ -178,7 +178,7 @@
       "description": "Sparkling lemon and green verbena deliver a bright, energizing opening.",
       "price": 1799,
       "stock": 25,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "17",
@@ -268,7 +268,7 @@
       "description": "Smoky oud and warming spices form a bold, long-lasting woody profile.",
       "price": 2999,
       "stock": 5,
-      "isDeleted": true
+      "isDeleted": false
     },
     {
       "id": "26",
@@ -527,7 +527,7 @@
       "price": 99,
       "stock": 85,
       "image": "/images/productimage/citrus-embers.png",
-      "isDeleted": true,
+      "isDeleted": false,
       "id": "cCeKqZtFNRc"
     },
     {
@@ -537,7 +537,7 @@
       "price": 852,
       "stock": 988,
       "image": "/images/productimage/citrus-embers.png",
-      "isDeleted": true,
+      "isDeleted": false,
       "id": "ubj7dBIP5k0"
     }
   ],

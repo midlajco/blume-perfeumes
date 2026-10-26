@@ -2,25 +2,44 @@ import axios from "axios";
 
 const URL = "http://localhost:3000/products";
 
-
-
-
 export const createProduct = async (product) => {
-  const response = await axios.post(URL,product);
+  const response = await axios.post(URL, product);
   return response.data;
 };
+// export const getProducts = async () => {
+//   const response = await axios.get(URL);
+//   return response.data;
+// };
+
 export const getProducts = async () => {
-  const response = await axios.get(URL);
+  const response = await axios.get(URL, {
+    params: {
+    
+      isDeleted: false,
+    },
+  });
+
   return response.data;
 };
+
+// export const getProducts = async (page, limit = 5) => {
+//   const response = await axios.get(URL, {
+//     params: {
+//       _page: page,
+//       _per_page: limit,
+//     },
+//   });
+
+//   return response.data;
+// };
 export const getProductById = async (id) => {
   const response = await axios.get(`${URL}/${id}`);
   return response.data;
 };
 
 export const SoftDeleteProductById = async (id) => {
-  const response = await axios.patch(`${URL}/${id}`,{
-    isDeleted:true
+  const response = await axios.patch(`${URL}/${id}`, {
+    isDeleted: true,
   });
   return response.data;
 };
@@ -35,13 +54,11 @@ export const updateProductById = async (id, product) => {
   const response = await axios.patch(`${URL}/${id}`, product);
   return response.data;
 };
-export const getDeletedProducts=async()=>{
-  const response =await axios.get(`${URL}?isDeleted=true`);
+export const getDeletedProducts = async () => {
+  const response = await axios.get(`${URL}?isDeleted=true`);
   return response.data;
-}
+};
 export const deleteProductById = async (id) => {
   const response = await axios.delete(`${URL}/${id}`);
   return response.data;
 };
-
-
