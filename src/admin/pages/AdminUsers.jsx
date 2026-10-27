@@ -16,7 +16,7 @@ function AdminUsers() {
   const [searchterm,setSearchTerm]=useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   
-  const filteredUsers =users?.filter((user)=>user.name.toLowerCase().includes(searchterm.toLocaleLowerCase()) || user.email.toLowerCase().includes(searchterm))
+  const filteredUsers =users?.filter((user)=>user.name.toLowerCase().includes(searchterm) || user.email.toLowerCase().includes(searchterm))
                             .filter((user)=>statusFilter==="all" || user.status ===statusFilter)
 
   const delerMutation =useMutation({
@@ -146,7 +146,7 @@ return (
                 </td>
 
                 <td className="px-6 py-3.5">
-                  {/* <select
+                  <select
                     value={user.status}
                     onChange={(e) =>
                       statusMutation.mutate({
@@ -160,18 +160,7 @@ return (
                   >
                     <option value="active">Unblock</option>
                     <option value="blocked">Block</option>
-                  </select> */}
-                  <button
-  type="button"
-  onClick={() => handleToggleStatus(user)}
-  className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-    user.status === "blocked"
-      ? "bg-green-100 text-green-700 hover:bg-green-200"
-      : "bg-red-100 text-red-700 hover:bg-red-200"
-  }`}
->
-  {user.status === "blocked" ? "Unblock" : "Block"}
-</button>
+                  </select>
                 </td>
 
                 <td className="px-6 py-3.5 text-center">

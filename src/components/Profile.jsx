@@ -11,8 +11,6 @@ import {
 } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/authSlice";
-import { toast } from "sonner";
-
 
 function ProfileSidebar({ isOpen, onClose, user, }) {
   const navigate = useNavigate();
@@ -29,39 +27,18 @@ function ProfileSidebar({ isOpen, onClose, user, }) {
     { name: "Cart", icon: ShoppingBag, path: "/cart" },
   ];
 
-  // const handleLogout = () => {
-  //   const confirmLogout = window.confirm(
-  //     "Are you sure you want to logout?"
-  //   );
+  const handleLogout = () => {
+    const confirmLogout = window.confirm(
+      "Are you sure you want to logout?"
+    );
 
-  //   if (confirmLogout) {
-  //     dispatch(logout());
-  //     localStorage.removeItem("userId")
-  //     onClose();
-  //     navigate("/")
-  //   }
-  // }
-
-  
-const handleLogout = () => {
-  toast("Are you sure you want to logout?", {
-    action: {
-      label: "Logout",
-      onClick: () => {
-        dispatch(logout());
-        localStorage.removeItem("userId");
-        onClose();
-        navigate("/");
-      },
-    },
-    cancel: {
-      label: "Cancel",
-      onClick: () => {},
-    },
-    duration: 5000,
-  });
-};
-
+    if (confirmLogout) {
+      dispatch(logout());
+      localStorage.removeItem("userId")
+      onClose();
+      navigate("/")
+    }
+  }
 
   return (
     <div className="fixed inset-0 z-[100]">

@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import React, { useState } from 'react'
 import { changeOrderStatus, getorders } from '../../services/OrderService'
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ChevronDown, Filter, Package, PackageSearch, Search } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Filter, Package, Search } from 'lucide-react';
 
 function AdminOrders() {
 
@@ -32,7 +32,7 @@ function AdminOrders() {
       status: newStatus,
     })
   }
-  const filteredOrders = orders?.filter((order) => order.customer.name.toLowerCase().includes(searchterm.toLowerCase()) || order.id.toLowerCase().includes(searchterm))
+  const filteredOrders = orders?.filter((order) => order.customer.name.toLowerCase().includes(searchterm) || order.id.toLowerCase().includes(searchterm))
     .filter((order) => statusFilter === "all" || order.status === statusFilter)
 
 
@@ -42,35 +42,6 @@ function AdminOrders() {
   if (isError) {
     return <p>failed to laod</p>
   }
-  console.log(orders)
-  if (orders.length === 0) {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-[#f8f5ef] p-6">
-      <div className="w-full max-w-md rounded-2xl border border-[#e5ddd2] bg-[#fbf9f5] px-8 py-12 text-center shadow-sm">
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f0e9df]">
-          <PackageSearch
-            size={36}
-            strokeWidth={1.4}
-            className="text-[#82796e]"
-          />
-        </div>
-
-        <h2 className="font-serif text-2xl text-[#29251f]">
-          No orders yet
-        </h2>
-
-        <p className="mx-auto mt-3 max-w-xs text-sm leading-6 text-[#82796e]">
-          Your orders will appear here once customers start placing their orders.
-        </p>
-
-        <div className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full border border-[#e5ddd2] bg-[#f8f5ef] px-4 py-2 text-xs font-medium text-[#71675b]">
-          <Package size={15} />
-          Waiting for your first order
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 

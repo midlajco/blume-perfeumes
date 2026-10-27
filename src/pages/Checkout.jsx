@@ -41,34 +41,23 @@ function Checkout() {
 
   }
   const orderMutation = useMutation({
-  mutationFn: placeOrder,
+    mutationFn: placeOrder,
+    onSuccess: async () => {
+      alert("Order placed successfully!");
 
-  onSuccess: async () => {
-    // The order has already been created successfully.
-    alert("Order placed successfully!");
+      await updateCart(cart.id, []);
+       navigate("/orders")
 
-    // Navigate even if clearing the cart fails.
-    navigate("/orders");
 
-    try {
-      if (cart?.id) {
-        await updateCart(cart.id, []);
-      }
-    } catch (error) {
-      console.error("Order created, but cart clearing failed:", error);
-      alert("Your order was placed, but the cart could not be cleared.");
-    } finally {
-      await queryClient.invalidateQueries({
+      queryClient.invalidateQueries({
         queryKey: ["cart", user.id],
       });
-    }
-  },
-
-  onError: (error) => {
-    console.error("Order creation failed:", error);
-    alert("Failed to place order. Please check your orders before retrying.");
-  },
-});
+    },
+    onError: (error) => {
+      console.error("Order failed:", error);
+      alert("Failed to place order.");
+    },
+  })
   function handlePlaceOrder(e) {
     e.preventDefault();
 
@@ -96,7 +85,7 @@ function Checkout() {
       customer: form,
       items: items,
       total: total,
-      status: "pending",
+      status: "Pending",
       createdAt: new Date().toISOString().split("T")[0],
     };
     orderMutation.mutate(orderData)
@@ -538,13 +527,19 @@ function Checkout() {
           </div>
 
           {/* Place Order */}
-         <button
-  type="submit"
-  disabled={orderMutation.isPending}
-  className="rounded-lg bg-[#292824] px-6 py-3 text-white transition hover:bg-[#454139] disabled:cursor-not-allowed disabled:opacity-50"
->
-  {orderMutation.isPending ? "Placing Order..." : "Place Order"}
-</button>
+          <button
+            type="submit"
+            disabled={orderMutation.isPending}
+            className="group mt-6 flex min-h-[60px] w-full items-center justify-center gap-4 bg-[#171614] px-5 py-4 text-sm text-white transition-colors hover:bg-[#39342e] disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {orderMutation.isPending ? "Placing Order..." : "Place Order"}
+
+            {!orderMutation.isPending && (
+              <span className="text-xl transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            )}
+          </button>
 
           {/* Security Note */}
           <div className="mt-6 flex items-center justify-center gap-2 text-center text-xs text-[#625c54]">

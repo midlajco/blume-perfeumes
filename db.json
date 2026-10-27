@@ -3,26 +3,20 @@
     {
       "name": "midlaj",
       "email": "midlaj@gmail.com",
-      "password": "741852963",
+      "password": "12312378",
       "role": "user",
-      "status": "active",
-      "id": "Uey8Dwol6LM"
+      "status": "blocked",
+      "id": "7O1xvfMJtow",
+      "blocked": true
     },
     {
-      "name": "jico",
-      "email": "jico@gmail.com",
+      "name": "admin",
+      "email": "admin@gmail.com",
       "password": "741852963",
-      "role": "user",
+      "role": "admin",
       "status": "active",
-      "id": "1CboBXu5pgk"
-    },
-    {
-      "name": "test",
-      "email": "test@gmail.com",
-      "password": "741852963",
-      "role": "user",
-      "status": "active",
-      "id": "pKZ-KOMQfvE"
+      "id": "ZleJoxaNXyU",
+      "blocked": true
     }
   ],
   "products": [
@@ -582,14 +576,6 @@
           "image": "/images/productimage/mandarin-grove.png",
           "category": "Fresh",
           "price": 1899
-        },
-        {
-          "productId": "44",
-          "name": "Blood Orange",
-          "description": "Juicy blood orange and bright citrus peel give this scent a vivid opening.",
-          "image": "/images/productimage/blood-orange.png",
-          "category": "Fresh",
-          "price": 1899
         }
       ],
       "id": "5zt4i2w79ps"
@@ -628,20 +614,21 @@
       "userId": "7O1xvfMJtow",
       "items": [
         {
+          "productId": "11",
+          "name": "Lotus Dream",
+          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+          "price": 1999,
+          "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "quantity": 1
+        },
+        {
           "productId": "10",
           "name": "Velvet Rose",
           "description": "Lush rose and subtle green notes give this fragrance a refined character.",
           "price": 2499,
           "image": "/images/productimage/velvet-rose.png",
           "category": "Floral",
-          "quantity": 1
-        },
-        {
-          "productId": "44",
-          "name": "Blood Orange",
-          "price": 1899,
-          "image": "/images/productimage/blood-orange.png",
-          "category": "Fresh",
           "quantity": 1
         }
       ],
@@ -690,22 +677,230 @@
         }
       ],
       "id": "u1m8HRaMyhk"
-    },
+    }
+  ],
+  "orders": [
     {
-      "userId": "Uey8Dwol6LM",
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "asmas",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "+919446480362",
+        "address": "casdca",
+        "city": "das",
+        "pincode": "77",
+        "paymentMethod": "COD"
+      },
       "items": [
         {
-          "productId": "ubj7dBIP5k0",
-          "name": "new",
-          "price": 852,
-          "image": "/images/productimage/citrus-embers.png",
+          "productId": "22",
+          "name": "Green Tea",
+          "price": 1799,
+          "image": "/images/productimage/green-tea.png",
+          "category": "Fresh",
+          "quantity": 13
+        }
+      ],
+      "total": 23387,
+      "status": "cancelled",
+      "createdAt": "2026-10-20T04:08:57.189Z",
+      "id": "OJSYOsWgndo"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "asmas",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "das",
+        "pincode": "55",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "13",
+          "name": "Lavender Sky",
+          "price": 1899,
+          "image": "/images/productimage/lavender-sky.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "24",
+          "name": "Coconut Breeze",
+          "price": 1999,
+          "image": "/images/productimage/coconut-breeze.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "12",
+          "name": "Peony Blush",
+          "price": 2199,
+          "image": "/images/productimage/peony-blush.png",
+          "category": "Floral",
+          "quantity": 1
+        }
+      ],
+      "total": 6097,
+      "status": "delivered",
+      "createdAt": "2026-10-20T05:09:21.840Z",
+      "id": "BlJ5T-V0ipw"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "asmas",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "das",
+        "pincode": "3",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "44",
+          "name": "Blood Orange",
+          "price": 1899,
+          "image": "/images/productimage/blood-orange.png",
           "category": "Fresh",
           "quantity": 1
         }
       ],
-      "id": "Z2DOw1lX12A"
+      "total": 1899,
+      "status": "cancelled",
+      "createdAt": "2026-10-20T05:10:05.008Z",
+      "id": "gxwgGgQZghc"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "midlaj",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "saas",
+        "pincode": "666",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "16",
+          "name": "Lemon Verbena",
+          "price": 1799,
+          "image": "/images/productimage/lemon-verbena.png",
+          "category": "Fresh",
+          "quantity": 3
+        },
+        {
+          "productId": "27",
+          "name": "Mandarin Grove",
+          "price": 1899,
+          "image": "/images/productimage/mandarin-grove.png",
+          "category": "Fresh",
+          "quantity": 2
+        },
+        {
+          "productId": "21",
+          "name": "Wild Berry",
+          "price": 1899,
+          "image": "/images/productimage/wild-berry.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "44",
+          "name": "Blood Orange",
+          "price": 1899,
+          "image": "/images/productimage/blood-orange.png",
+          "category": "Fresh",
+          "quantity": 3
+        },
+        {
+          "productId": "11",
+          "name": "Lotus Dream",
+          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+          "price": 1999,
+          "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "quantity": 4
+        }
+      ],
+      "total": 24787,
+      "status": "cancelled",
+      "createdAt": "2026-10-20T07:15:13.684Z",
+      "id": "wt7HBRHcExg"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "midlaj",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "+919446480362",
+        "address": "asda",
+        "city": "saas",
+        "pincode": "321.35",
+        "paymentMethod": "UPI"
+      },
+      "items": [
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "quantity": 6
+        }
+      ],
+      "total": 10794,
+      "status": "pending",
+      "createdAt": "2026-10-20T10:32:25.238Z",
+      "id": "1zInZ74gyss"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "n",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "asvdsa",
+        "address": "Asda's",
+        "city": "ada",
+        "pincode": "dasva",
+        "paymentMethod": "UPI"
+      },
+      "items": [
+        {
+          "productId": "22",
+          "name": "Green Tea",
+          "price": 1799,
+          "image": "/images/productimage/green-tea.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "quantity": 4
+        },
+        {
+          "productId": "30",
+          "name": "Silver Rain",
+          "price": 2099,
+          "image": "/images/productimage/silver-rain.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 11094,
+      "status": "shipped",
+      "createdAt": "2026-10-20T12:52:31.333Z",
+      "id": "ik0hGmsABSU"
     }
   ],
-  "orders": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

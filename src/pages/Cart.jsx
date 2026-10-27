@@ -158,21 +158,18 @@ return (
 
               {/* Quantity */}
               <div className="flex h-10 items-center justify-center border border-[#d8d0c5] sm:h-12">
-            {
-              item.quantity>1 && 
-                  <button
+                <button
                   type="button"
-                  disabled={item.quantity<2}
                   onClick={() =>
-                     handleQ(item.productId, -1)
-                     
+                    item.quantity > 1
+                      ? handleQ(item.productId, -1)
+                      : handleRemove(item.productId)
                   }
                   aria-label={`Decrease ${item.name} quantity`}
                   className="h-full px-2 text-sm transition-colors hover:bg-[#ece5db] sm:px-3"
                 >
                   −
                 </button>
-            }
 
                 <span className="min-w-5 text-center font-serif text-sm">
                   {item.quantity}

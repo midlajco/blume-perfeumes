@@ -31,18 +31,17 @@ import {
   Cell,
   
 } from "recharts";
-import { error } from 'server/router';
 
 
 
 function Dashboard() {
-  const { data: users,isLoading,isError } = useQuery({
+  const { data: users } = useQuery({
     queryFn: getUsers,
     queryKey: ["users"]
 
   });
 
-  const { data: products,} = useQuery({
+  const { data: products } = useQuery({
     queryFn: getProducts,
     queryKey: ["products"]
 
@@ -110,13 +109,6 @@ const statusData = ["Pending", "Shipped", "Delivered", "Cancelled"].map(
 );
 
 const statusColors = ["#d8c8a8", "#b6a18a", "#a9bc86", "#d49a94"];
-if(isLoading){
-  return <p>Loading</p>
-}
-if(isError){
-  return <p>somethng went wrong</p>
-  
-}
 return (
   <div className="min-h-screen bg-[#f7f3ed] p-4 text-[#292724] sm:p-6">
     {/* Dashboard Header */}

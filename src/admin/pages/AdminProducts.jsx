@@ -31,7 +31,7 @@ function AdminProducts() {
   filter((product) => product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())).
     filter((product) => category === "All" || product.category === category);
 
-  const totalPages = Math.max(1, Math.ceil(filteredProducts?.length / limit));
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / limit));
   const startIndex = (currentPage - 1) * limit;
 
   const paginatedProducts = filteredProducts?.slice(
