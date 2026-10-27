@@ -16,6 +16,10 @@ function CustomerProtectedRoute({ isLoading }) {
             replace
             state={{ from: location }} />
     }
+    if(user.status === "blocked"){
+        return <Navigate  to="/login"
+         />
+    }
     if(user.role !== "user"){
         return <Navigate to="/admin" replace />
     }

@@ -11,6 +11,7 @@ function Checkout() {
    const navigate =useNavigate();
 
   const user = useSelector((state) => state.auth.user);
+  console.log(user)
   const queryClient = useQueryClient();
 
   const [form, setForm] = useState({
@@ -93,9 +94,14 @@ function Checkout() {
   
   
   }
+  console.log(user)
+  
 
   if (!user) {
     return <p>Please log in to continue.</p>;
+  }
+  if(user.status === "blocked"){
+    return <p>acc suspended</p>
   }
 
   if (isLoading) {

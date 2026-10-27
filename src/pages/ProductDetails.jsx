@@ -95,6 +95,7 @@ function ProductDetails() {
         const newItem = {
             productId: product.id,
             name: product.name,
+            
             description: product.description,
 
             image: product.image,

@@ -54,6 +54,10 @@ function Login() {
                 setApiError("Paassword Not Match");
                 return;
             }
+            if(user.status ==="blocked"){
+                setApiError("account suspended");
+                return;
+            }
             localStorage.setItem("userId", String(user.id));
 
             dispatch(login({
@@ -61,6 +65,7 @@ function Login() {
                 name: user.name,
                 email: user.email,
                 role: user.role,
+                status:user.status,
             }))
 
             navigate(location.state?.from?.pathname || "/", { replace: true });

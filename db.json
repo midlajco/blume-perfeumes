@@ -5,7 +5,7 @@
       "email": "midlaj@gmail.com",
       "password": "12312378",
       "role": "user",
-      "status": "blocked",
+      "status": "active",
       "id": "7O1xvfMJtow",
       "blocked": true
     },
@@ -17,6 +17,14 @@
       "status": "active",
       "id": "ZleJoxaNXyU",
       "blocked": true
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "741852963",
+      "role": "user",
+      "status": "active",
+      "id": "tpb0qq9Wc9c"
     }
   ],
   "products": [
@@ -539,6 +547,16 @@
       "image": "/images/productimage/citrus-embers.png",
       "isDeleted": false,
       "id": "ubj7dBIP5k0"
+    },
+    {
+      "name": "newtt",
+      "category": "Floral",
+      "description": "new",
+      "price": 2000,
+      "stock": 10,
+      "image": "/images/productimage/mandarin-grove.png",
+      "isDeleted": false,
+      "id": "XoLBRJhO72I"
     }
   ],
   "wishlists": [
@@ -552,14 +570,6 @@
           "image": "/images/productimage/lavender-sky.png",
           "category": "Fresh",
           "price": 1899
-        },
-        {
-          "productId": "19",
-          "name": "Almond Milk",
-          "description": "Soft almond and creamy musk create a gentle, cozy fragrance.",
-          "image": "/images/productimage/almond-milk.png",
-          "category": "Musk",
-          "price": 2099
         },
         {
           "productId": "35",
@@ -576,6 +586,14 @@
           "image": "/images/productimage/mandarin-grove.png",
           "category": "Fresh",
           "price": 1899
+        },
+        {
+          "productId": "8",
+          "name": "White Musk",
+          "description": "Clean white musk wraps the skin in a soft, understated scent.",
+          "image": "/images/productimage/white-musk.png",
+          "category": "Musk",
+          "price": 2199
         }
       ],
       "id": "5zt4i2w79ps"
@@ -612,26 +630,7 @@
   "carts": [
     {
       "userId": "7O1xvfMJtow",
-      "items": [
-        {
-          "productId": "11",
-          "name": "Lotus Dream",
-          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
-          "price": 1999,
-          "image": "/images/productimage/lotus-dream.png",
-          "category": "Floral",
-          "quantity": 1
-        },
-        {
-          "productId": "10",
-          "name": "Velvet Rose",
-          "description": "Lush rose and subtle green notes give this fragrance a refined character.",
-          "price": 2499,
-          "image": "/images/productimage/velvet-rose.png",
-          "category": "Floral",
-          "quantity": 1
-        }
-      ],
+      "items": [],
       "id": "hTHv0MHcS44"
     },
     {
@@ -677,6 +676,20 @@
         }
       ],
       "id": "u1m8HRaMyhk"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "items": [
+        {
+          "productId": "cCeKqZtFNRc",
+          "name": "jisan",
+          "price": 99,
+          "image": "/images/productimage/citrus-embers.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "id": "Y8-0bVyQLr0"
     }
   ],
   "orders": [
@@ -900,6 +913,265 @@
       "status": "shipped",
       "createdAt": "2026-10-20T12:52:31.333Z",
       "id": "ik0hGmsABSU"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj",
+        "email": "midlajjj@gmail.com",
+        "phone": "944648055",
+        "address": "manjeri hoasjd",
+        "city": "kochi",
+        "pincode": "123123",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "5",
+          "name": "Ocean Mist",
+          "price": 1999,
+          "image": "/images/productimage/ocean-mist.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 1999,
+      "status": "delivered",
+      "createdAt": "2026-10-27",
+      "id": "rhgO0kFDdb8"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj lap",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "944648055",
+        "address": "erfewa",
+        "city": "dsgfds",
+        "pincode": "985895",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 1799,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "Kg1NdqjqraQ"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj lap",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "742741",
+        "address": "dfsf",
+        "city": "dsgfds",
+        "pincode": "fdssd",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "ubj7dBIP5k0",
+          "name": "new",
+          "price": 852,
+          "image": "/images/productimage/citrus-embers.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 852,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "QH93cKdw0wQ"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj lap",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "944648055",
+        "address": "dfsas",
+        "city": "dsaf",
+        "pincode": "965896259",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "cCeKqZtFNRc",
+          "name": "jisan",
+          "price": 99,
+          "image": "/images/productimage/citrus-embers.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "36",
+          "name": "Bergamot",
+          "price": 1799,
+          "image": "/images/productimage/bergamot.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 1898,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "Yc3bWRvry5g"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj lap",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "944648055",
+        "address": "sdafas",
+        "city": "kochi",
+        "pincode": "85274471",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "4",
+          "name": "Citrus Blossom",
+          "price": 1899,
+          "image": "/images/productimage/citrus-blossom.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Sandal Aura",
+          "price": 2699,
+          "image": "/images/productimage/sandal-aura.png",
+          "category": "Woody",
+          "quantity": 1
+        }
+      ],
+      "total": 4598,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "8COGS_Snb4M"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "944648055",
+        "address": "asfaf",
+        "city": "afa",
+        "pincode": "85588",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "cCeKqZtFNRc",
+          "name": "jisan",
+          "price": 99,
+          "image": "/images/productimage/citrus-embers.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 99,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "hJ9EOCjKrN0"
+    },
+    {
+      "userId": "tpb0qq9Wc9c",
+      "customer": {
+        "name": "midlaj lap",
+        "email": "lapmidlaj@gmail.com",
+        "phone": "/7841094865132",
+        "address": "ewrtybnj",
+        "city": "erscfgvbhn ",
+        "pincode": "741852963",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "cCeKqZtFNRc",
+          "name": "jisan",
+          "price": 99,
+          "image": "/images/productimage/citrus-embers.png",
+          "category": "Fresh",
+          "quantity": 1
+        }
+      ],
+      "total": 99,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "nVz8BFFxrP8"
+    },
+    {
+      "userId": "7O1xvfMJtow",
+      "customer": {
+        "name": "midlaj k k",
+        "email": "midlajkalathil11@gmail.com",
+        "phone": "+919446480362",
+        "address": "dca",
+        "city": "asdc",
+        "pincode": "ascdas",
+        "paymentMethod": "COD"
+      },
+      "items": [
+        {
+          "productId": "11",
+          "name": "Lotus Dream",
+          "description": "Watery lotus and delicate petals create a serene, light floral fragrance.",
+          "price": 1999,
+          "image": "/images/productimage/lotus-dream.png",
+          "category": "Floral",
+          "quantity": 2
+        },
+        {
+          "productId": "10",
+          "name": "Velvet Rose",
+          "description": "Lush rose and subtle green notes give this fragrance a refined character.",
+          "price": 2499,
+          "image": "/images/productimage/velvet-rose.png",
+          "category": "Floral",
+          "quantity": 1
+        },
+        {
+          "productId": "19",
+          "name": "Almond Milk",
+          "description": "Soft almond and creamy musk create a gentle, cozy fragrance.",
+          "price": 2099,
+          "image": "/images/productimage/almond-milk.png",
+          "category": "Musk",
+          "quantity": 1
+        },
+        {
+          "productId": "ubj7dBIP5k0",
+          "name": "new",
+          "price": 852,
+          "image": "/images/productimage/citrus-embers.png",
+          "category": "Fresh",
+          "quantity": 1
+        },
+        {
+          "productId": "8",
+          "name": "White Musk",
+          "price": 2199,
+          "image": "/images/productimage/white-musk.png",
+          "category": "Musk",
+          "quantity": 1
+        }
+      ],
+      "total": 11647,
+      "status": "Pending",
+      "createdAt": "2026-10-27",
+      "id": "5Vcu4CT57M4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

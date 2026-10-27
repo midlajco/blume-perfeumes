@@ -11,7 +11,7 @@ import Login from './pages/Login'
 import { useQuery } from '@tanstack/react-query'
 import { getUserById } from './services/UserService'
 
-import { login } from './redux/authSlice'
+import { login, logout } from './redux/authSlice'
 import { useDispatch } from 'react-redux'
 
 import Cart from './pages/Cart'
@@ -60,13 +60,19 @@ function App() {
 
   useEffect(() => {
     if (isUserLoading) return;
+    
 
-    if (user) {
+    if(user?.status ==="blocked"){
+      dispatch(logout)
+    }
+    
+    if (user?.status !=="blocked") {
       dispatch(login({
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
+        id: user?.id,
+        name: user?.name,
+        email: user?.email,
+        role: user?.role,
+        status:user?.status,
       }));
     }
 

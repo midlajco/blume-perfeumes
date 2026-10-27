@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query'
-import React from 'react'
 import { getUsers } from '../../services/UserService'
 import { getProducts } from '../../services/ProductService';
 import { getorders } from '../../services/OrderService';
@@ -31,27 +30,33 @@ import {
   Cell,
   
 } from "recharts";
-
-
-
 function Dashboard() {
-  const { data: users } = useQuery({
+  const { data: users, isLoading: isUsersLoading, isError: isUsersError } = useQuery({
     queryFn: getUsers,
     queryKey: ["users"]
 
   });
 
-  const { data: products } = useQuery({
+  const { data: products, isLoading: isProductsLoading, isError: isProductsError } = useQuery({
     queryFn: getProducts,
     queryKey: ["products"]
 
   })
 
-  const { data: orders } = useQuery({
+  const { data: orders, isLoading: isOrdersLoading, isError: isOrdersError } = useQuery({
     queryFn: getorders,
     queryKey: ["orders"]
 
   })
+
+  if (isUsersLoading || isProductsLoading || isOrdersLoading) {
+    return <p>Loading dashboard...</p>;
+  }
+
+  if (isUsersError || isProductsError || isOrdersError) {
+    return <p>Failed to load dashboard.</p>;
+  }
+
   const recentOrders = orders?.slice(0, 5)
   const totalRevenue = orders?.reduce((total, order) => {
     if (order.status !== "delivered") {
